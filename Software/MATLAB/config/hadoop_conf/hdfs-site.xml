@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+		<name>dfs.name.dir</name>
+		<value>file:////local/hdfs/name</value>
+		<final>true</final>
+	</property>
+
+	<property>
+		<name>dfs.namenode.checkpoint.dir</name>
+		<value>/local/hdfs/namesecondary</value>
+	</property>
+
+	<property>
+		<name>dfs.datanode.data.dir</name>
+		<value>/data/1/data,/data/2/data</value>
+		<final>true</final> 
+	</property> 
+
+	<property>
+		<name>dfs.webhdfs.enabled</name>
+		<value>true</value>
+	</property>
+
+	<!-- This allows for disk failure in the cluster without having to take a whole node out -->
+	<property>
+		<name>dfs.datanode.failed.volumes.tolerated</name>
+		<value>1</value>
+		<final>true</final> 
+	</property> 
+
+	<property>
+		<name>dfs.permissions</name>
+		<value>false</value>
+	</property>
+
+	<property> 
+		<name>dfs.secondary.http.address</name>
+		<value>hadoop02.mathworks.com:50090</value>
+		<description>SecondaryNameNodeHostname</description>
+	</property>
+
+	<property>  
+		<name>dfs.hosts.exclude</name>
+		<value>/mathworks/hub/apps_PCT/LS_Hadoop_Hive_hadoop01/hadoop-3.1.2/etc/hadoop/excluded_hosts</value>
+		<description>Gracefully remove nodes from cluster</description>
+	</property>
+
+	<!-- Speeding up decommissioning of nodes -->
+	<property>
+		<name>dfs.namenode.replication.max-streams</name>
+		<value>50</value>
+	</property> 
+
+	<property>
+		<name>dfs.namenode.replication.max-streams-hard-limit</name>
+		<value>100</value>
+	</property> 
+
+	<property>
+		<name>dfs.namenode.replication.work.multiplier.per.iteration</name>
+		<value>200</value>
+	</property> 
+</configuration>

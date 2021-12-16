@@ -1,0 +1,3 @@
+[submodule "Modules/matlab-spark-api"]
+	path = Modules/matlab-spark-api
+	url = git@github.com:mathworks-ref-arch/matlab-spark-api.git
