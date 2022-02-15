@@ -1,5 +1,10 @@
 #  MATLAB Interface *for Apache Spark* - Release Notes
 
+## 0.1.15 (9th Feb 2022)
+* Add support for Spark 3.2.1
+* Fixed Java build for newest MATLAB release (shading certain packages)
+* Removed spark-avro Jar for Spark 2.2.0 (no longer available at repositories)
+
 ## 0.1.14 (16th Dec 2021)
 * Minor, cosmetic fixes
 
