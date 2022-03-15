@@ -1,5 +1,8 @@
 #  MATLAB Interface *for Apache Spark* - Release Notes
 
+## 0.1.17 (15th Mar 2022)
+* matlab-spark-api, release 0.1.24
+
 ## 0.1.16 (7th Mar 2022)
 * matlab-spark-api
   * Implement more `sql.functions` methods
