@@ -1,5 +1,14 @@
 #  MATLAB Interface *for Apache Spark* - Release Notes
 
+## 0.1.18 (11th Apr 2022)
+* matlab-spark-api, release 0.1.26
+  * Support methods `describe` and `summary` on Dataset class
+  * Support *Pandas* methods in `PythonSparkBuilder`.
+* matlab-spark-api, release 0.1.25
+  * Enabling additional arguments for Table functions
+  * Provide helper functions for Compiler workflows
+  * Add `na` method for dataset
+
 ## 0.1.17 (15th Mar 2022)
 * matlab-spark-api, release 0.1.24
 
