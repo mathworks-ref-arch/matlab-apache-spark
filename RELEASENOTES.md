@@ -1,5 +1,32 @@
 #  MATLAB Interface *for Apache Spark* - Release Notes
 
+## 0.1.19 (7th Sept 2022)
+* matlab-spark-api, release 0.2.0
+  * Improved PythonSparkBuilder
+  * Improved error handling in deployed mode
+  * Make it possible to use arrays as arguments to Python/Java Spark Builder functions
+  * Bugfix for `pretty` in R2019a
+* matlab-spark-api, release 0.1.32
+  * Pointing JAVA_HOME to JDK Home for Databricks environment
+* matlab-spark-api, release 0.1.31
+  * Support `mapInPandas`
+  * Rename `func_pandas` to `func_applyInPandas`
+  * Lazy creation of MATLAB Runtime for Python interface
+* matlab-spark-api, release 0.1.30
+  * Support for vectors in `dataset2table`
+  * Support string type for SparkBuilder additional arguments
+* matlab-spark-api, release 0.1.29
+  * Add `isin` method for `Column` object
+* matlab-spark-api, release 0.1.28
+  * Add exception cause for missing Jar in Databricks
+* matlab-spark-api, release 0.1.27
+  * Migrate from `distutils` to `setuptools` for `PythonSparkBuilder`
+  * Add metrics option for (some) Pandas methods
+  * Enable persistent spark sessions for Databricks
+  * Add concat method from `sql.functions`
+  * Add schema method on `DataFrameReader`
+  * Add `TableAggregate` type for `PythonSparkBuilder`
+
 ## 0.1.18 (11th Apr 2022)
 * matlab-spark-api, release 0.1.26
   * Support methods `describe` and `summary` on Dataset class
