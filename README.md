@@ -3,7 +3,7 @@
 Apache Spark™ is a unified analytics engine for large-scale data processing.
 
 ## Requirements
-### MathWorks Products (http://www.mathworks.com)
+### MathWorks Products (https://www.mathworks.com)
 Requires MATLAB release R2019a or later.
 * MATLAB
 * (optional) MATLAB Parallel Server
