@@ -1,5 +1,14 @@
 #  MATLAB Interface *for Apache Spark* - Release Notes
 
+## 0.1.20 (6th October 2022)
+* Documentation updates
+* matlab-spark-api, release 0.2.2
+  * Global handling of MATLAB Runtime for Java jobs, improving resource utilization.
+  * Make `runSparkShell` functions Runtime version dependent
+  * Add support for `pythonPackage` for older releases.
+  * Fixed `SparkBuilder` issue for release R2022b.
+
+
 ## 0.1.19 (7th Sept 2022)
 * matlab-spark-api, release 0.2.0
   * Improved PythonSparkBuilder

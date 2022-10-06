@@ -5,7 +5,7 @@ It is not necessary to have an installation of Spark on the machine where this i
 running. For certain scenarios, however, it might be helpful.
 
 The Apache Spark installation can be downloaded from the
-[official Spark page](https://spark.apache.org),
+[official Apache Spark page](https://spark.apache.org),
 and can be unpacked anywhere on the local drive.
 
 The installation simply consists of unpacking the file into a directory.
@@ -91,6 +91,17 @@ overwriting any existing file with the same name there.
 To use the package, MATLAB must be restarted. The reason for this is that the Java classes
 need to be on the *MATLAB Static Java Classpath*.
 
+### Build MATLAB Runtime Queue
+This is a utility that is needed when running a Jar compiled with MATLAB Compiler SDK
+and the `SparkBuilder` (available in this package). To build it, simply run:
 
-[//]: #  (Copyright 2021 The MathWorks, Inc.)
+```matlab
+matlab.sparkutils.buildRuntimeQueueJar
+```
+
+Running this requires, as in the previous step, a JDK >= 8 and Apache Maven installed
+on the machine where this is built.
+
+
+[//]: #  (Copyright 2021-2022 The MathWorks, Inc.)
 

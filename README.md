@@ -19,9 +19,15 @@ Requires MATLAB release R2019a or later.
 
 This package enables connecting to a local or a remote Apache Spark cluster,
 to read and write data, and perform certain Spark operations on this data.
-It is not an alternative to the existing workflows for Compiling MATLAB code into
-Spark Jars, but a way of interacting with a cluster and its data, and preparing
-algorithms for the Jar workflows.
+MATLAB ships with two workflows involving Apache Spark, 
+[Deploy Applications Using the MATLAB API for Spark](https://www.mathworks.com/help/releases/R2022a/compiler/deploy-applications-using-the-matlab-api-for-spark.html)
+and
+[Deploy Tall Arrays to a Spark Enabled Hadoop Cluster](https://www.mathworks.com/help/releases/R2022a/compiler/deploy-tall-arrays-to-a-spark-enabled-hadoop-cluster.html).
+
+This package provides some different workflows for using MATLAB and Spark together.
+* Using interactive Spark sessions to read, write and operate on Data on a Spark cluster.
+* Using the MATLAB Compiler SDK to compile MATLAB code into a form that can be used in
+Spark Dataset methods (map, filter, etc.). This can be used both with Java and Python.
 
 ## Installation
 
@@ -35,74 +41,13 @@ algorithms for the Jar workflows.
 
 ### Build MATLAB Spark Utility
 
-To build the MATLAB Spark Utility, both a Java 1.8 SDK and Apache Maven are needed.
+Before the package can be used, some Jar files must be built.
 
-The easiest way to build it is by starting MATLAB and building it from there.
-Depending on the Spark version used, Maven must be called with different arguments.
-
-In MATLAB, run the file `Software/MATLAB/startup.m` (in this repository/package).
-This can be done each time, or if this package should always be on the path, it can
-be persisted with the command `savepath`.
-
-This package can be used with different Spark versions, so make sure the correct one is
-configured.
-
-```matlab
->> C = matlab.sparkutils.Config.getInMemoryConfig()
-C = 
-  Config with properties:
-
-          Versions: ["2.2.0"    "2.4.5"    "2.4.7"    "3.0.1"    "3.0.1-hadoop3.2"    "3.1.2"]
-    CurrentVersion: '3.0.1'
-            Master: 'local'
-
->> C.CurrentVersion = "3.1.2"
-C = 
-  Config with properties:
-
-          Versions: ["2.2.0"    "2.4.5"    "2.4.7"    "3.0.1"    "3.0.1-hadoop3.2"    "3.1.2"]
-    CurrentVersion: "3.1.2"
-            Master: 'local'
-
->> C.saveConfig  % Save the configuration
-```
-
-The installation also needs a Jar file, `matlab-spark-utility`, which can now be built.
-This requires a **JDK 8+** and **Maven 3.6.3** installed on the computer.
-Simply run
-```matlab
-buildMatlabSparkUtility
-```
-
-It will pick up the correct versions of different files from the configuration set
-in the previous step.
-
-Refer to the `Config` object for more information, see [Config](Documentation/Config.md).
-
-The package also needs the newly created Jar file (and some additional downloaded ones)
-on the *static java classpath*. To achieve this, generate the javaclasspath.txt file.
-
-```matlab
-generateJavapathForSpark()
-```
-
-This will create a file `javaclasspath.txt` in the folder `Software/MATLAB`.
-To make MATLAB use the entries in these file, either
-1. Copy it to your MATLAB preference directory (can be found in MATLAB through `prefdir`), or
-2. Start MATLAB from the same directory where this file is located. If MATLAB is started
-from the `Software/MATLAB` directory, it will automatically set all MATLAB paths,
-and furthermore add the Jars in `javaclasspath.txt` to the static Java classpath.
-
-For option 1, there will also be a hyperlink in the output of the command above.
-
-**Note** Please note that the hyperlink will copy it to the preference directory, thereby
-overwriting any existing file with the same name there.
-
-To use the package, MATLAB must be restarted. The reason for this is that the Java classes
-need to be on the *MATLAB Static Java Classpath*.
+Please refer to the [Installation section](Documentation/Installation.md) for this.
 
 ## Usage
 
+### Interactive Spark
 First, create a Spark session
 ```matlab
 
@@ -119,7 +64,7 @@ flights = spark.read.format("csv") ...
     .load(addFileProtocol(flightsCSV));
 ```
 
-Check how man rows are in this dataset
+Check how many rows are in this dataset
 ```matlab
 >> fprintf("Number of flights: #%d\n", flights.count)
 Number of flights: #123523
@@ -183,7 +128,8 @@ only showing top 5 rows
 only showing top 10 rows
 ```
 
-Use a SQL statement to filter the flights, and plot some data on delays
+Use a SQL statement to filter the flights, convert the data to a MATLAB table,
+and plot some data on delays
 ```matlab
 AAflights = cleanFlights.filter("UniqueCarrier LIKE 'AA' AND DayOfWeek = 3") ...
     .select('ArrDelay', 'DepDelay');
@@ -197,6 +143,9 @@ legend("Arrival", "Departure");
 ylabel("Delay");
 xlabel("Flights");
 ```
+
+### Compiling code to Java or Python
+
 
 Please see the [documentation](Documentation/README.md) for more information.
 
@@ -215,4 +164,4 @@ https://www.mathworks.com/products/reference-architectures/request-new-reference
 
 Email: mwlab@mathworks.com
 
-[//]: #  (Copyright 2021 The MathWorks, Inc.)
+[//]: #  (Copyright 2021-2022 The MathWorks, Inc.)

@@ -99,32 +99,33 @@ xlabel("Flights");
 
 ## Compiling for use in Spark workflows
 
-This package can also be used to compile MATLAB functions into Java code and
+This package can also be used to compile MATLAB functions into Java or Python code and
 run them in a Spark workflow.
 
 > **Note:** This example requires the products **MATLAB Compiler** and
-> **MATLAB Compiler SDK**, in order to compile MATLAB code into a Java library.
+> **MATLAB Compiler SDK**, in order to compile MATLAB code into a Jar (for Java)
+> or a Wheel file (for Python).
 > Optionally, a local Spark installation can be helpful for testing.
 
-### Building
+### Deploying MATLAB code to Spark Cluster with Java
+
 This functionality relies on the `SparkBuilder`, which is described in detail
-here
-`../Software/MATLAB/sys/modules/matlab-spark-api/Documentation/SparkBuilder.md`.
+here `../Modules/matlab-spark-api/Documentation/SparkBuilder.md`.
 
 This example relies on a very simple function with two input arguments
 and two output arguments, both of types `string` and `int64`.
 
 The example files can be found in this location in the package:
-`Software/MATLAB/public/examples/sparkbuilder`
+`Software/MATLAB/examples/sparkbuilder`
 
-In MATLAB, `cd` to this directory, and run the file `build_sb_jar.m`.
+In MATLAB, `cd` to this directory, and run the file `build_java.m`.
 
 This will invoke the MATLAB Compiler (`mcc`), and then generate additional
 Java files with wrapper methods for use in Spark.
 
 When this process is done, a Jar-file has been created. In this example,
 it's found in
-`outFolder/example1_R2021b_Spark3.x_glnxa64.jar`.
+`javaOutput/example1_R2021b_Spark3.x_glnxa64.jar`.
 
 The name will be the same as `mcc` would create `example1.jar`, but with
 some additionaal information pertaining to
@@ -140,6 +141,42 @@ The same argument holds for the Spark version.
 
 The platform where this was compiled is a different matter. In general,
 a Jar-file compiled with MATLAB Compiler on one platform is compatible with
+other platforms supported by MATLAB. The exceptions to this rule are when:
+* The MATLAB code invokes Simulink. The output from Simulink Compiler is
+  platform dependent, so in this case it must be compiled on the same platform
+  where it runs.
+* The MATLAB code contains platform dependent code, e.g. mex-files.
+
+### Deploying MATLAB code to Spark Cluster with Python
+This functionality relies on the `PythonSparkBuilder`, which is described in detail
+here `../Modules/matlab-spark-api/Documentation/PythonSparkBuilder.md`.
+
+This example relies on a very simple function with two input arguments
+and two output arguments, both of types `string` and `int64`.
+
+The example files can be found in this location in the package:
+`Software/MATLAB/examples/sparkbuilder`
+
+In MATLAB, `cd` to this directory, and run the file `build_python.m`.
+
+This will invoke the MATLAB Compiler (`mcc`), and then generate additional
+Python files with wrapper methods for use in Spark.
+
+When this process is done, a Wheel-file has been created. In this example,
+it's found in
+`pythonOutput/dist/demo.simple-9.13.0-py3-none-any.whl`.
+
+The name will contain the package name, but additionally the MATLAB version 
+and the Python version used.
+
+As a Wheel-file created by MATLAB Compiler SDK needs the
+[MATLAB Runtime](https://uk.mathworks.com/products/compiler/matlab-runtime.html),
+having the MATLAB Release be part of the name can be helpful. 
+
+The same argument holds for the Spark version.
+
+The platform where this was compiled is a different matter. In general,
+a Wheel-file compiled with MATLAB Compiler on one platform is compatible with
 other platforms supported by MATLAB. The exceptions to this rule are when:
 * The MATLAB code invokes Simulink. The output from Simulink Compiler is
   platform dependent, so in this case it must be compiled on the same platform
@@ -227,7 +264,7 @@ DD8.show(10, false)
 only showing top 10 rows
 ```
 
-[//]: #  (Copyright 2021 The MathWorks, Inc.)
+[//]: #  (Copyright 2021-2022 The MathWorks, Inc.)
 
 
 
