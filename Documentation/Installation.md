@@ -91,16 +91,25 @@ overwriting any existing file with the same name there.
 To use the package, MATLAB must be restarted. The reason for this is that the Java classes
 need to be on the *MATLAB Static Java Classpath*.
 
-### Build MATLAB Runtime Queue
+### Building additional Jar files
+Running this requires, as in the previous step, a JDK >= 8 and Apache Maven installed
+on the machine where this is built.
+
+####  MATLAB Runtime Queue
 This is a utility that is needed when running a Jar compiled with MATLAB Compiler SDK
 and the `SparkBuilder` (available in this package). To build it, simply run:
 
 ```matlab
 matlab.sparkutils.buildRuntimeQueueJar
 ```
+#### MATLAB Encoders
+This is another utility that
+ is needed when running a Jar compiled with MATLAB Compiler SDK
+and the `SparkBuilder` (available in this package). To build it, simply run:
 
-Running this requires, as in the previous step, a JDK >= 8 and Apache Maven installed
-on the machine where this is built.
+```matlab
+matlab.sparkutils.buildMWEncoder
+```
 
 
 [//]: #  (Copyright 2021-2022 The MathWorks, Inc.)

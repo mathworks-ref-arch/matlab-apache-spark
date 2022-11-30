@@ -1,5 +1,12 @@
 #  MATLAB Interface *for Apache Spark* - Release Notes
 
+## 0.1.21 (4th November 2022)
+* SparkApiRef update
+* matlab-spark-api, release 0.2.4
+    * Support for more than 5 outputs for SparkBuilder (Scala)
+* matlab-spark-api, release 0.2.3
+    * Handle filename escaping for comments
+
 ## 0.1.20 (6th October 2022)
 * Documentation updates
 * matlab-spark-api, release 0.2.2

@@ -1,5 +1,4 @@
 # MATLAB Interface *for Apache Spark*
-
 ## API Reference
 
 Documentation generation settings:
@@ -15,14 +14,14 @@ Documentation generation settings:
 
 ### Classes
 
-* [matlab.compiler.mlspark.DataFrameNaFunctions](#matlabcompilermlsparkdataframenafunctions)
-* [matlab.compiler.mlspark.Dataset](#matlabcompilermlsparkdataset)
-* [matlab.compiler.mlspark.Catalog](#matlabcompilermlsparkcatalog)
-* [matlab.compiler.mlspark.DataFrameWriter](#matlabcompilermlsparkdataframewriter)
-* [matlab.compiler.mlspark.Column](#matlabcompilermlsparkcolumn)
-* [matlab.compiler.mlspark.DataFrameReader](#matlabcompilermlsparkdataframereader)
 * [matlab.compiler.mlspark.RelationalGroupedDataset](#matlabcompilermlsparkrelationalgroupeddataset)
+* [matlab.compiler.mlspark.Catalog](#matlabcompilermlsparkcatalog)
+* [matlab.compiler.mlspark.DataFrameReader](#matlabcompilermlsparkdataframereader)
+* [matlab.compiler.mlspark.DataFrameWriter](#matlabcompilermlsparkdataframewriter)
 * [matlab.compiler.mlspark.SparkSession](#matlabcompilermlsparksparksession)
+* [matlab.compiler.mlspark.DataFrameNaFunctions](#matlabcompilermlsparkdataframenafunctions)
+* [matlab.compiler.mlspark.Column](#matlabcompilermlsparkcolumn)
+* [matlab.compiler.mlspark.Dataset](#matlabcompilermlsparkdataset)
 
 ### Subpackage  *matlab.compiler.mlspark.functions*
 
@@ -115,10 +114,20 @@ Documentation generation settings:
 
 ### Classes
 
-* [compiler.build.spark.JavaClass](#compilerbuildsparkjavaclass)
 * [compiler.build.spark.SparkBuilder](#compilerbuildsparksparkbuilder)
-* [compiler.build.spark.PythonSparkBuilder](#compilerbuildsparkpythonsparkbuilder)
+* [compiler.build.spark.JavaClass](#compilerbuildsparkjavaclass)
 * [compiler.build.spark.File](#compilerbuildsparkfile)
+* [compiler.build.spark.PythonSparkBuilder](#compilerbuildsparkpythonsparkbuilder)
+
+### Subpackage  *compiler.build.spark.buildtype*
+
+
+### Classes
+
+* [compiler.build.spark.buildtype.JavaLib](#compilerbuildsparkbuildtypejavalib)
+* [compiler.build.spark.buildtype.BaseType](#compilerbuildsparkbuildtypebasetype)
+* [compiler.build.spark.buildtype.SparkApi](#compilerbuildsparkbuildtypesparkapi)
+* [compiler.build.spark.buildtype.SparkTall](#compilerbuildsparkbuildtypesparktall)
 
 ### Subpackage  *compiler.build.spark.types*
 
@@ -132,44 +141,50 @@ Documentation generation settings:
 ### Classes
 
 * [compiler.build.spark.types.ArgType](#compilerbuildsparktypesargtype)
-* [compiler.build.spark.types.Boolean](#compilerbuildsparktypesboolean)
+* [compiler.build.spark.types.String](#compilerbuildsparktypesstring)
+* [compiler.build.spark.types.Long](#compilerbuildsparktypeslong)
 * [compiler.build.spark.types.Double](#compilerbuildsparktypesdouble)
+* [compiler.build.spark.types.Boolean](#compilerbuildsparktypesboolean)
 * [compiler.build.spark.types.Float](#compilerbuildsparktypesfloat)
 * [compiler.build.spark.types.Integer](#compilerbuildsparktypesinteger)
-* [compiler.build.spark.types.Long](#compilerbuildsparktypeslong)
 * [compiler.build.spark.types.Short](#compilerbuildsparktypesshort)
-* [compiler.build.spark.types.String](#compilerbuildsparktypesstring)
 * [compiler.build.spark.types.Table](#compilerbuildsparktypestable)
-
-### Subpackage  *compiler.build.spark.buildtype*
-
-
-### Classes
-
-* [compiler.build.spark.buildtype.BaseType](#compilerbuildsparkbuildtypebasetype)
-* [compiler.build.spark.buildtype.JavaLib](#compilerbuildsparkbuildtypejavalib)
-* [compiler.build.spark.buildtype.SparkApi](#compilerbuildsparkbuildtypesparkapi)
-* [compiler.build.spark.buildtype.SparkTall](#compilerbuildsparkbuildtypesparktall)
 
 ## Package  *matlab.sparkutils*
 
 ### Functions
 
+* [matlab.sparkutils.buildMWEncoder](#matlabsparkutilsbuildmwencoder)
+* [matlab.sparkutils.isApacheSpark](#matlabsparkutilsisapachespark)
 * [matlab.sparkutils.getMatlabSparkUtilityFullName](#matlabsparkutilsgetmatlabsparkutilityfullname)
 * [matlab.sparkutils.getSparkBuilderRuntimeQueueFullName](#matlabsparkutilsgetsparkbuilderruntimequeuefullname)
+* [matlab.sparkutils.getSparkMATLABEncodersFullName](#matlabsparkutilsgetsparkmatlabencodersfullname)
+* [matlab.sparkutils.getMatlabSparkUtilityVersion](#matlabsparkutilsgetmatlabsparkutilityversion)
+* [matlab.sparkutils.getVersionFromSparkHome](#matlabsparkutilsgetversionfromsparkhome)
 * [matlab.sparkutils.datatypeMapper](#matlabsparkutilsdatatypemapper)
 * [matlab.sparkutils.buildRuntimeQueueJar](#matlabsparkutilsbuildruntimequeuejar)
 * [matlab.sparkutils.getMatlabSparkExtraJars](#matlabsparkutilsgetmatlabsparkextrajars)
-* [matlab.sparkutils.getMatlabSparkUtilityVersion](#matlabsparkutilsgetmatlabsparkutilityversion)
+* [matlab.sparkutils.getSystemSparkVersion](#matlabsparkutilsgetsystemsparkversion)
+* [matlab.sparkutils.queryMaven](#matlabsparkutilsquerymaven)
 
 
 ### Classes
 
+* [matlab.sparkutils.StringWriter](#matlabsparkutilsstringwriter)
 * [matlab.sparkutils.Config](#matlabsparkutilsconfig)
-* [matlab.sparkutils.JavaWriter](#matlabsparkutilsjavawriter)
 * [matlab.sparkutils.SparkDataframeDatastore](#matlabsparkutilssparkdataframedatastore)
 * [matlab.sparkutils.SparkSessionHandler](#matlabsparkutilssparksessionhandler)
-* [matlab.sparkutils.StringWriter](#matlabsparkutilsstringwriter)
+* [matlab.sparkutils.PomDep](#matlabsparkutilspomdep)
+* [matlab.sparkutils.PomGenerator](#matlabsparkutilspomgenerator)
+* [matlab.sparkutils.SparkJar](#matlabsparkutilssparkjar)
+* [matlab.sparkutils.JavaWriter](#matlabsparkutilsjavawriter)
+
+### Subpackage  *matlab.sparkutils.internal*
+
+### Functions
+
+* [matlab.sparkutils.internal.genExpressionEncoders](#matlabsparkutilsinternalgenexpressionencoders)
+
 
 
 ### Standalone Functions
@@ -208,6 +223,483 @@ Documentation generation settings:
 ## API Help
 
 
+#### matlab.compiler.mlspark.RelationalGroupedDataset
+
+```notalanguage
+  RelationalGroupedDataset Special dataset, returned by methods like groupBy.
+
+```
+
+*matlab.compiler.mlspark.RelationalGroupedDataset.agg*
+
+```notalanguage
+  AGG Aggregate the the elements using columns
+ 
+  Example:
+
+```
+
+*matlab.compiler.mlspark.RelationalGroupedDataset.count*
+
+```notalanguage
+  COUNT Count the elements in the different groups in the dataset
+
+```
+
+*matlab.compiler.mlspark.RelationalGroupedDataset.mean*
+
+```notalanguage
+  MEAN Calculates the mean of the columns given as arguments
+
+```
+
+*matlab.compiler.mlspark.RelationalGroupedDataset.sum*
+
+```notalanguage
+  SUM Sum the elements in a RelationalGroupDataset
+
+```
+
+
+#### matlab.compiler.mlspark.Catalog
+
+```notalanguage
+  CATALOG Class wrapping the Java Catalog object
+
+```
+
+*matlab.compiler.mlspark.Catalog.dropGlobalTempView*
+
+```notalanguage
+  DROPGLOBALTEMPVIEW Drop a global temporary view from a Spark session
+ 
+  Returns true if the view is dropped successfully, false otherwise.
+  
+  
+  Example:
+ 
+      B = catalog.dropGlobalTempView('MyTempTable');
+
+```
+
+*matlab.compiler.mlspark.Catalog.dropTempView*
+
+```notalanguage
+  DROPTEMPVIEW Drop a temporary view from a Spark session
+ 
+  Returns true if the view is dropped successfully, false otherwise.
+  
+  
+  Example:
+ 
+      B = catalog.dropTempView('MyTempTable');
+
+```
+
+*matlab.compiler.mlspark.Catalog.listTables*
+
+```notalanguage
+  LISTTABLES List database tables in a Spark session
+ 
+  Returns a Dataset with the information.
+  
+  
+  Example:
+ 
+      tDS = catalog.listTables();
+
+```
+
+
+#### matlab.compiler.mlspark.DataFrameReader
+
+```notalanguage
+  DATAFRAMEREADER Interface used to load a Dataset from external storage systems 
+  This object can be used to read from external storage systems such as 
+  file systems, key-value stores, etc. 
+  
+  Use SparkSession.read() to access this.
+
+```
+
+*matlab.compiler.mlspark.DataFrameReader.format*
+
+```notalanguage
+  FORMAT Method to specify the input data source format
+  The format method can be used to configure the DataFrameReader to use an
+  appropriate source format. 
+  
+  Supported data formats include:
+    json
+    csv
+    parquet
+    orc
+    text
+    jdbc
+    libsvm
+    delta
+ 
+  For example:
+  
+      myDataSet = spark...
+          .read.format('csv')...
+          .option('header','true')...
+          .option('inferSchema','true')...
+          .load(inputLocation);
+
+```
+
+*matlab.compiler.mlspark.DataFrameReader.jdbc*
+
+```notalanguage
+  JDBC Method to Construct a dataframe representing a database table
+  Construct a DataFrame representing the database table accessible via JDBC URL url named table and connection properties.
+  
+  To read from a MySQL database:
+  
+      %% Imports
+      import java.util.Properties;
+                  
+      % Create properties for the connection
+      connectionProperties = Properties();
+  
+      % Please consider using secretes to store this info
+      connectionProperties.put("user", "ahosagra@mysql-test");
+      connectionProperties.put("password", "DummyPassword#");
+  
+      %% Create a Spark configuration and shared Spark session
+      import matlab.compiler.mlspark.*;
+  
+      % Set the location for temporary files
+      sparkProperties = containers.Map({'spark.executorEnv.MCR_CACHE_ROOT'},{'/tmp/matlabapp'});
+  
+      % Setup configuration to run locally
+      conf = SparkConf( ...
+          'Master','local',...
+          'AppName','DBConnectDemo', ...
+          'SparkProperties',sparkProperties, ...
+          "SparkVersion", "2" ...
+          );
+  
+      % This will create a singleton SparkSession using the getOrCreate() method
+      spark = SparkSession(conf);
+ 
+  Finally, a dataset can be created using:
+      dbConnString = 'jdbc:mysql://mysql-test.mwlab.io:3306/test_database?useSSL=true&requireSSL=false';   
+      df = spark.read.jdbc(dbConnString,...
+          'test_binary',...
+          connectionProperties);
+  
+      % Spark Dataset
+      df = matlab.compiler.mlspark.Dataset(dfj);
+  
+      % Marshal to a table
+      mlTable = table(df);
+
+```
+
+*matlab.compiler.mlspark.DataFrameReader.load*
+
+```notalanguage
+  LOAD Method to load the input in as a Dataframe / Dataset
+  The input datasource in as a dataframe / dataset.
+ 
+  For example:
+ 
+      myDataSet = spark...
+          .read.format('csv')...
+          .option('header','true')...
+          .option('inferSchema','true')...
+          .load(inputLocation);
+
+```
+
+*matlab.compiler.mlspark.DataFrameReader.option*
+
+```notalanguage
+  OPTION Method to specify input options for the underlying data source
+  The configuration of the underlying input options control how the data
+  source is handled.
+  
+  For example, to indicate that the input CSV has a header lines and is
+  clean enough to infer the schema:
+  
+      myDataSet = spark...
+          .read.format('csv')...
+          .option('header','true')...
+          .option('inferSchema','true')...
+          .load(inputLocation);
+
+```
+
+*matlab.compiler.mlspark.DataFrameReader.schema*
+
+```notalanguage
+  SCHEMA Specify the schema to be used when loading data.
+ 
+  For example, to indicate that the input CSV has a header lines and is
+  clean enough to infer the schema:
+ 
+      myDataSet = spark...
+          .read.format('json')...
+          .schema("`time` TIMESTAMP, `action` STRING") ...
+          .load(inputLocation);
+
+```
+
+
+#### matlab.compiler.mlspark.DataFrameWriter
+
+```notalanguage
+  DATAFRAMEWRITER Interface to write datasets to external storage systems
+   This object can be used to write to external storage systems such as 
+  file systems, key-value stores, etc. 
+  
+  Use SparkSession.write() to access this.
+
+```
+
+*matlab.compiler.mlspark.DataFrameWriter.format*
+
+```notalanguage
+  FORMAT Method to specify the output data source format
+  The format method can be used to configure the DataFrameWriter to use an
+  appropriate source format. 
+  
+  Built-in options include:
+    json
+    csv
+    parquet
+  etc.
+ 
+  For example:
+  
+      myDataSet.write.format('parquet')...
+          .save(outputLocation);
+
+```
+
+*matlab.compiler.mlspark.DataFrameWriter.option*
+
+```notalanguage
+  OPTION Method to specify options for writer
+ 
+  Built-in options include:
+
+```
+
+*matlab.compiler.mlspark.DataFrameWriter.parquet*
+
+```notalanguage
+  PARQUET Method to Saves the content of the DataFrame in Parquet format at the specified path.
+
+```
+
+*matlab.compiler.mlspark.DataFrameWriter.save*
+
+```notalanguage
+  SAVE Method to save the dataset to external storage systems
+  Use this method to save the object to storage in the specified format.
+  
+  For example:
+  
+    outputLocation = '/delta/sampletable';
+    sparkDataSet...
+      .write.format("delta")...
+      .save(outputLocation);
+
+```
+
+*matlab.compiler.mlspark.DataFrameWriter.saveAsTable*
+
+```notalanguage
+  SAVEASTABLE Method to save the dataset as a table
+  Use this method to save the object to storage in the specified format.
+ 
+  For example:
+ 
+    outputLocation = '/delta/sampletable';
+    DS.write.format("delta")...
+                .option("path", outputLocation)...
+                .saveAsTable("testTableName");
+
+```
+
+
+#### matlab.compiler.mlspark.SparkSession
+
+```notalanguage
+  SPARKSESSION Entry point to programming Spark with the Dataset and DataFrame API
+  The Spark Context is retrieved using the .getOrCreate to return the shared Spark
+  Context as required by Spark.
+ 
+  For example to create a session:
+    % Create a Spark configuration and shared Spark session
+ 
+      conf = createJavaSparkConf( ...
+          'Master', 'local',...
+          'AppName', 'mysession', ...
+          'SparkProperties', getDefaultSparkProperties ...
+          );
+ 
+    % This will create a singleton SparkSession using the getOrCreate() method
+    spark = matlab.compiler.mlspark.SparkSession(conf);
+
+```
+
+*matlab.compiler.mlspark.SparkSession.setCheckpointDir*
+
+```notalanguage
+matlab.compiler.mlspark.SparkSession/setCheckpointDir is a function.
+    setCheckpointDir(obj, dirName)
+
+```
+
+*matlab.compiler.mlspark.SparkSession.setLogLevel*
+
+```notalanguage
+matlab.compiler.mlspark.SparkSession/setLogLevel is a function.
+    setLogLevel(obj, logLevel)
+
+```
+
+*matlab.compiler.mlspark.SparkSession.getSparkConf*
+
+```notalanguage
+matlab.compiler.mlspark.SparkSession/getSparkConf is a function.
+    result = getSparkConf(obj)
+
+```
+
+*matlab.compiler.mlspark.SparkSession.delete*
+
+```notalanguage
+ DELETE   Delete a handle object.
+    DELETE(H) deletes all handle objects in array H. After the delete 
+    function call, H is an array of invalid objects.
+ 
+    See also MATLAB.COMPILER.MLSPARK.SPARKSESSION, MATLAB.COMPILER.MLSPARK.SPARKSESSION/ISVALID, CLEAR
+
+Help for matlab.compiler.mlspark.SparkSession/delete is inherited from superclass handle
+
+```
+
+*matlab.compiler.mlspark.SparkSession.addtoBroadcastList*
+
+```notalanguage
+matlab.compiler.mlspark.SparkSession/addtoBroadcastList is a function.
+    addtoBroadcastList(obj, bobj)
+
+```
+
+*matlab.compiler.mlspark.SparkSession.getJavaStorageLevel*
+
+```notalanguage
+matlab.compiler.mlspark.SparkSession/getJavaStorageLevel is a function.
+    result = getJavaStorageLevel(obj, storageLvl)
+
+```
+
+*matlab.compiler.mlspark.SparkSession.catalog*
+
+```notalanguage
+  CATALOG Return a catalog from a Spark session.
+ 
+  This will return a new dataset, sorted by the column names provided
+  Example:
+ 
+      C = spark.catalog();
+
+```
+
+*matlab.compiler.mlspark.SparkSession.range*
+
+```notalanguage
+  RANGE Method to create a dataset with a single long column
+  Creates a single column dataset, returning the result as a DataFrame. 
+  
+  The method accepts the start, end (exclusive) and defaults to a step size
+  of 1. It is also possible to specify the number of partitions.
+  
+  Example:
+  
+    % Create a range of 10 long integers
+    myDS = spark.range(0,10);
+    
+    % Create a range of 20 long integers with a step size of 2
+    myDS = spark.range(0, 20, 2);
+  
+    % Create a range with a specific number of partitions (5 in this case)
+    myDS = spark.range(0, 20, 2, 5);
+
+```
+
+*matlab.compiler.mlspark.SparkSession.read*
+
+```notalanguage
+  READ Method to get the dataframe reader from the current SparkSession
+  Returns a DataFrameReader that can be used to read non-streaming data in as a DataFrame.
+  
+  Please see SparkSession to create a shared spark context. 
+  
+        % Create a shared SparkSession  
+        spark = SparkSession(conf);
+        
+        % Get the dataframe reader
+        dfreader = spark.read();
+
+```
+
+*matlab.compiler.mlspark.SparkSession.sparkContext*
+
+```notalanguage
+  SPARKCONTEXT Method to return the sparkContext from the SparkSession
+  The spark context for a given SparkSession object is returned as a handle
+  to the user.
+
+```
+
+*matlab.compiler.mlspark.SparkSession.sql*
+
+```notalanguage
+  SQL Method to invoke a SQL Query
+  Executes a SQL query using Spark, returning the result as a DataFrame. 
+  
+  For example: 
+  
+    spark = matlab.compiler.mlspark.SparkSession(sparkConf)
+    tblF = spark.sql('SELECT col from test.TestTable limit 10');
+
+```
+
+*matlab.compiler.mlspark.SparkSession.table*
+
+```notalanguage
+  TABLE Method to returns the specified table/view as a DataFrame
+  Executes a SQL query using Spark, returning the result as a DataFrame. 
+  
+    spark = matlab.compiler.mlspark.SparkSession(sparkConf)
+    tblF = spark.table('test.TestTable');
+
+```
+
+*matlab.compiler.mlspark.SparkSession.write*
+
+```notalanguage
+  WRITE Method to get the dataframe writer from the current SparkSession
+  Returns a DataFrameWriter that can be used to write data through a DataFrame.
+  
+  Please see SparkSession to create a shared spark context. 
+  
+        % Create a shared SparkSession  
+        spark = SparkSession(conf);
+        
+        % Get the dataframe writer
+        dfwriter = spark.write();
+
+```
+
+
 #### matlab.compiler.mlspark.DataFrameNaFunctions
 
 ```notalanguage
@@ -219,6 +711,658 @@ Documentation generation settings:
 
 ```notalanguage
   drop Drop rows in Dataset
+
+```
+
+
+#### matlab.compiler.mlspark.Column
+
+```notalanguage
+  Column MATLAB class wrapper for Spark Java Column objects
+
+```
+
+*matlab.compiler.mlspark.Column.string*
+
+```notalanguage
+matlab.compiler.mlspark.Column/string is a function.
+    str = string(obj)
+
+```
+
+*matlab.compiler.mlspark.Column.char*
+
+```notalanguage
+ CHAR Create character array
+    CHR = CHAR(X) converts array X of nonnegative integer codes into a
+    character array. Valid codes range from 0 to 65535, where codes 0 to
+    127 correspond to 7-bit ASCII characters. The characters that MATLAB
+    can process (other than 7-bit ASCII characters) depend on your current
+    locale setting. Use DOUBLE to convert characters to numeric codes.
+ 
+    CHR = CHAR(C), when C is a cell array of character vectors, places each 
+    element of C into a row of the character array CHR. Use CELLSTR to
+    convert back.
+ 
+    CHR = CHAR(STR), when STR is a string array, converts each element of STR into 
+    a row of the character array CHR. Use STRING to convert back.
+ 
+    CHR = CHAR(T1,T2,T3,..) forms the character array CHR containing the
+    text from T1,T2,T3,... as rows. CHAR automatically pads each row with
+    spaces in order to form a character array. Each text parameter, Ti,
+    can itself be a character array. This allows the creation of
+    arbitrarily large character arrays. If Ti has no characters, then the
+    corresponding row of CHR is filled with spaces.
+ 
+    See also STRING, DOUBLE, CELLSTR, ISCELLSTR, ISCHAR, ISSTRING.
+
+```
+
+*matlab.compiler.mlspark.Column.ne*
+
+```notalanguage
+ ~= (NE)   Not equal relation for handles.
+    Handles are equal if they are handles for the same object and are 
+    unequal otherwise.
+ 
+    H1 ~= H2 performs element-wise comparisons between handle arrays H1 
+    and H2.  H1 and H2 must be of the same dimensions unless one is a 
+    scalar.  The result is a logical array of the same dimensions, where 
+    each element is an element-wise equality result.
+ 
+    If one of H1 or H2 is scalar, scalar expansion is performed and the 
+    result will match the dimensions of the array that is not scalar.
+ 
+    TF = NE(H1, H2) stores the result in a logical array of the same
+    dimensions.
+ 
+    See also MATLAB.COMPILER.MLSPARK.COLUMN, MATLAB.COMPILER.MLSPARK.COLUMN/EQ, MATLAB.COMPILER.MLSPARK.COLUMN/GE, MATLAB.COMPILER.MLSPARK.COLUMN/GT, MATLAB.COMPILER.MLSPARK.COLUMN/LE, MATLAB.COMPILER.MLSPARK.COLUMN/LT
+
+Help for matlab.compiler.mlspark.Column/ne is inherited from superclass handle
+
+```
+
+*matlab.compiler.mlspark.Column.eq*
+
+```notalanguage
+ == (EQ)   Test handle equality.
+    Handles are equal if they are handles for the same object.
+ 
+    H1 == H2 performs element-wise comparisons between handle arrays H1 and
+    H2.  H1 and H2 must be of the same dimensions unless one is a scalar.
+    The result is a logical array of the same dimensions, where each
+    element is an element-wise equality result.
+ 
+    If one of H1 or H2 is scalar, scalar expansion is performed and the 
+    result will match the dimensions of the array that is not scalar.
+ 
+    TF = EQ(H1, H2) stores the result in a logical array of the same 
+    dimensions.
+ 
+    See also MATLAB.COMPILER.MLSPARK.COLUMN, MATLAB.COMPILER.MLSPARK.COLUMN/GE, MATLAB.COMPILER.MLSPARK.COLUMN/GT, MATLAB.COMPILER.MLSPARK.COLUMN/LE, MATLAB.COMPILER.MLSPARK.COLUMN/LT, MATLAB.COMPILER.MLSPARK.COLUMN/NE
+
+Help for matlab.compiler.mlspark.Column/eq is inherited from superclass handle
+
+```
+
+*matlab.compiler.mlspark.Column.le*
+
+```notalanguage
+ <= (LE)   Less than or equal relation for handles.
+    Handles are equal if they are handles for the same object.  All 
+    comparisons use a number associated with each handle object.  Nothing
+    can be assumed about the result of a handle comparison except that the
+    repeated comparison of two handles in the same MATLAB session will 
+    yield the same result.  The order of handle values is purely arbitrary 
+    and has no connection to the state of the handle objects being 
+    compared.
+ 
+    H1 <= H2 performs element-wise comparisons between handle arrays H1 and
+    H2.  H1 and H2 must be of the same dimensions unless one is a scalar.
+    The result is a logical array of the same dimensions, where each
+    element is an element-wise >= result.
+ 
+    If one of H1 or H2 is scalar, scalar expansion is performed and the 
+    result will match the dimensions of the array that is not scalar.
+ 
+    TF = LE(H1, H2) stores the result in a logical array of the same 
+    dimensions.
+ 
+    See also MATLAB.COMPILER.MLSPARK.COLUMN, MATLAB.COMPILER.MLSPARK.COLUMN/EQ, MATLAB.COMPILER.MLSPARK.COLUMN/GE, MATLAB.COMPILER.MLSPARK.COLUMN/GT, MATLAB.COMPILER.MLSPARK.COLUMN/LT, MATLAB.COMPILER.MLSPARK.COLUMN/NE
+
+Help for matlab.compiler.mlspark.Column/le is inherited from superclass handle
+
+```
+
+*matlab.compiler.mlspark.Column.ge*
+
+```notalanguage
+ >= (GE)   Greater than or equal relation for handles.
+    H1 >= H2 performs element-wise comparisons between handle arrays H1 and
+    H2.  H1 and H2 must be of the same dimensions unless one is a scalar.
+    The result is a logical array of the same dimensions, where each
+    element is an element-wise >= result.
+ 
+    If one of H1 or H2 is scalar, scalar expansion is performed and the 
+    result will match the dimensions of the array that is not scalar.
+ 
+    TF = GE(H1, H2) stores the result in a logical array of the same 
+    dimensions.
+ 
+    See also MATLAB.COMPILER.MLSPARK.COLUMN, MATLAB.COMPILER.MLSPARK.COLUMN/EQ, MATLAB.COMPILER.MLSPARK.COLUMN/GT, MATLAB.COMPILER.MLSPARK.COLUMN/LE, MATLAB.COMPILER.MLSPARK.COLUMN/LT, MATLAB.COMPILER.MLSPARK.COLUMN/NE
+
+Help for matlab.compiler.mlspark.Column/ge is inherited from superclass handle
+
+```
+
+*matlab.compiler.mlspark.Column.as*
+
+```notalanguage
+matlab.compiler.mlspark.Column/as is a function.
+    col = as(obj, aliasName)
+
+```
+
+*matlab.compiler.mlspark.Column.not*
+
+```notalanguage
+ ~   Logical NOT.
+    ~A performs a logical NOT of input array A, and returns an array
+    containing elements set to either logical 1 (TRUE) or logical 0 (FALSE).
+    An element of the output array is set to 1 if A contains a zero value
+    element at that same array location.  Otherwise, that element is set to 0.
+ 
+    B = NOT(A) is called for the syntax '~A' when A is an object.
+ 
+    ~ can also be used to ignore input arguments in a function definition,
+    and output arguments in a function call. 
+  
+    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
+ 
+    See also AND, OR, XOR.
+
+```
+
+*matlab.compiler.mlspark.Column.uminus*
+
+```notalanguage
+ -  Unary minus.
+    -A negates the elements of A.
+ 
+    B = UMINUS(A) is called for the syntax '-A' when A is an object.
+ 
+    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
+
+```
+
+*matlab.compiler.mlspark.Column.mrdivide*
+
+```notalanguage
+ / Right matrix divide.
+    B/A is the matrix division of A into B, which is roughly the
+    same as B*INV(A) , except it is computed in a different way.
+    More precisely, B/A = (A'\B')'. See MLDIVIDE for details.
+ 
+    C = MRDIVIDE(B,A) is called for the syntax 'B / A' when B or A is an object.
+ 
+    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
+ 
+    See also MLDIVIDE, RDIVIDE, LDIVIDE, PAGEMRDIVIDE.
+
+```
+
+*matlab.compiler.mlspark.Column.rdivide*
+
+```notalanguage
+ ./  Right array divide.
+    A./B divides each element of A by the corresponding element of B. A and 
+    B must have compatible sizes. In the simplest cases, they can be the 
+    same size or one can be a scalar. Two inputs have compatible sizes if, 
+    for every dimension, the dimension sizes of the inputs are either the 
+    same or one of them is 1. The element-wise operators ./ and .\ are 
+    related to each other by the equation A./B = B.\A.
+ 
+    C = RDIVIDE(A,B) is called for the syntax 'A ./ B' when A or B is an object.
+ 
+    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
+ 
+    See also LDIVIDE, MLDIVIDE, MRDIVIDE.
+
+```
+
+*matlab.compiler.mlspark.Column.mtimes*
+
+```notalanguage
+ *   Matrix multiply.
+    X*Y is the matrix product of X and Y.  Any scalar (a 1-by-1 matrix)
+    may multiply anything.  Otherwise, the number of columns of X must
+    equal the number of rows of Y.
+ 
+    C = MTIMES(A,B) is called for the syntax 'A * B' when A or B is an
+    object.
+ 
+    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
+ 
+    See also TIMES, PAGEMTIMES.
+
+```
+
+*matlab.compiler.mlspark.Column.times*
+
+```notalanguage
+ .*  Array multiply.
+    X.*Y denotes element-by-element multiplication. X and Y must have
+    compatible sizes. In the simplest cases, they can be the same size or
+    one can be a scalar. Two inputs have compatible sizes if, for every
+    dimension, the dimension sizes of the inputs are either the same or one
+    of them is 1.
+ 
+    C = TIMES(A,B) is called for the syntax 'A .* B' when A or B is an object.
+ 
+    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
+ 
+    See also MTIMES.
+
+```
+
+*matlab.compiler.mlspark.Column.and*
+
+```notalanguage
+  and Boolean and for a column by another column or a value
+ 
+  and is also overloaded as an operator (see below)
+ 
+  Example:
+ 
+      % C1 is a column
+      % C2 is a value or another column
+ 
+      % "And" by another column
+      anotherCol = C1.and(aDataset.col('numericCol'))
+ 
+      % Overloaded operator version
+      anotherCol = C1 & aDataset.col('numericCol')
+
+```
+
+*matlab.compiler.mlspark.Column.between*
+
+```notalanguage
+  BETWEEN Filter entries in a certain range
+ 
+  Example:
+ 
+      % C1 is a column
+ 
+      % Make the sort order descending
+      newCol = C1.between('2010-01-14', '2011-05-22');
+
+```
+
+*matlab.compiler.mlspark.Column.cast*
+
+```notalanguage
+  COL Cast the type of a column
+ 
+  Example:
+ 
+      % C1 is a column with a number but in string form
+ 
+      % Cast it to an integer
+      newCol = C1.cast('int');
+
+```
+
+*matlab.compiler.mlspark.Column.desc*
+
+```notalanguage
+  DESC Set the sort order to descending for a column
+ 
+  Example:
+ 
+      % C1 is a column
+ 
+      % Make the sort order descending
+      newCol = C1.desc();
+
+```
+
+*matlab.compiler.mlspark.Column.divide*
+
+```notalanguage
+  divide a column by another column or a value
+ 
+  rdivide (element-wise) is also overloaded as an operator (see below)
+ 
+  Example:
+ 
+      % DS is a dataset
+      % C1 is a column 
+      % C2 is a value or another column
+ 
+      % Divide by a constant value and by another column
+      C1 = DS.col("columnName");
+      C2 = DS.col("anotherColumnName");
+      DS2 = DS.withColumn("columnNameToAddOrReplace", C1.divide(10));
+      DS3 = DS.withColumn("columnNameToAddOrReplace", C1.divide(C2));
+ 
+      % with operator overloading
+      DS2 = DS.withColumn("columnNameToAddOrReplace", C1 / 10);
+      DS3 = DS.withColumn("columnNameToAddOrReplace", C1 ./ C2);
+
+```
+
+*matlab.compiler.mlspark.Column.equalTo*
+
+```notalanguage
+  equalTo Compare column with another column or value for equality
+ 
+  eq is the overloaded operator for this in MATLAB, and is also implemented
+  (see below)
+ 
+  Example:
+ 
+      % C1 is a column
+      % C2 is a numeric, logical or string value, or another column
+ 
+      % Compare column with a constant value and another column
+      newCol = C1.equalTo(0.01);
+      anotherCol = C1.equalTo(aDataset.col('numericCol'))
+ 
+      % Overloaded operator version
+      newCol = C1 == 0.01;
+      anotherCol = C1 == aDataset.col('numericCol')
+
+```
+
+*matlab.compiler.mlspark.Column.explain*
+
+```notalanguage
+  EXPLAIN Returns a string explanation of the column, or prints it to console for debugging
+ 
+  explain(obj) displays a string explanation of the column in the console.
+ 
+  explain(obj, extended) enables display of extended debugging information,
+  if the optional extended input is set to true (default=false).
+ 
+  explanationStr = explain(_) returns the explanation as a string instead of
+  displaying it in the console;
+ 
+  Example:
+      % DS is a dataset
+      % C1 is a column
+ 
+      % Return an explanation of a column
+      C1 = DS.col("columnName");
+      explanation = C1.explain(true)    % => "columnName#307375"
+ 
+      % Return an explanation of a modified column
+      explanation = explain(C1 + 1.5);  % => "(`columnName` + 1.5D)"
+
+```
+
+*matlab.compiler.mlspark.Column.geq*
+
+```notalanguage
+  ge Compare greater than or equal for a column by another column or a value
+ 
+  ge is the overloaded operator for this in MATLAB, and is also implemented
+  (see below)
+ 
+  Example:
+ 
+      % C1 is a column
+      % C2 is a value or another column
+ 
+      % Check which column items are >= a value or another column
+      newCol = C1.geq(0.01);
+      anotherCol = C1.geq(aDataset.col('numericCol'))
+ 
+      % Overloaded operator version
+      newCol = C1 >= 0.01;
+      anotherCol = C1 >= aDataset.col('numericCol')
+
+```
+
+*matlab.compiler.mlspark.Column.gt*
+
+```notalanguage
+  gt Compare greater than for a column by another column or a value
+ 
+  gt is also overloaded as an operator (see below)
+ 
+  Example:
+ 
+      % C1 is a column
+      % C2 is a value or another column
+ 
+      % Check which column items are > a value or another column
+      newCol = C1.gt(0.01);
+      anotherCol = C1.gt(aDataset.col('numericCol'))
+ 
+      % Overloaded operator version
+      newCol = C1 > 0.01;
+      anotherCol = C1 > aDataset.col('numericCol')
+
+```
+
+*matlab.compiler.mlspark.Column.isin*
+
+```notalanguage
+  ISIN Evaluates isin for a column
+ 
+  Example: Reduce list of flights to the ones originating in SYR or
+  BWI.
+  airlines = spark.read.format("delta").load("/data/airlinedelay_delta_all")
+  airlines_part = airlines.filter(airlines.col("Origin").isin("SYR", "BWI"))
+ 
+  The argument can also be a string array
+  airlines_part = airlines.filter(airlines.col("Origin").isin(["SYR", "BWI"]))
+
+```
+
+*matlab.compiler.mlspark.Column.leq*
+
+```notalanguage
+  lt Compare less than or equal for a column by another column or a value
+ 
+  le is the overloaded operator for this in MATLAB, and is also implemented
+  (see below)
+  
+  Example:
+ 
+      % C1 is a column
+      % C2 is a value or another column
+ 
+      % Check which column items are <= a value or another column
+      newCol = C1.leq(0.01);
+      anotherCol = C1.leq(aDataset.col('numericCol'))
+ 
+      % Overloaded operator version
+      newCol = C1 <= 0.01;
+      anotherCol = C1 <= aDataset.col('numericCol')
+
+```
+
+*matlab.compiler.mlspark.Column.lt*
+
+```notalanguage
+  lt Compare less than for a column by another column or a value
+ 
+  lt is also the overloaded as an operator (see below)
+ 
+  Example:
+ 
+      % C1 is a column
+      % C2 is a value or another column
+ 
+      % Check which column items are < a value or another column
+      newCol = C1.lt(0.01);
+      anotherCol = C1.lt(aDataset.col('numericCol'))
+ 
+      % Overloaded operator version
+      newCol = C1 < 0.01;
+      anotherCol = C1 < aDataset.col('numericCol')
+
+```
+
+*matlab.compiler.mlspark.Column.minus*
+
+```notalanguage
+  COL subtract a column by another column or a value
+ 
+  minus is also overloaded as an operator (see below)
+ 
+  Example:
+      % DS is a dataset
+      % C1 is a column 
+      % C2 is a value or another column
+ 
+      % Subtract a constant value and another column
+      C1 = DS.col("columnName");
+      C2 = DS.col("anotherColumnName");
+      DS2 = DS.withColumn("columnNameToAddOrReplace", C1.minus(10));
+      DS3 = DS.withColumn("columnNameToAddOrReplace", C1.minus(C2));
+ 
+      % with operator overloading
+      DS2 = DS.withColumn("columnNameToAddOrReplace", C1 - 10);
+      DS3 = DS.withColumn("columnNameToAddOrReplace", C1 - C2);
+
+```
+
+*matlab.compiler.mlspark.Column.multiply*
+
+```notalanguage
+  COL multiply a column by another column or a value
+ 
+  times (element-wise) is also overloaded as an operator (see below)
+  
+  Example:
+ 
+      % C1 is a column
+      % C2 is a value or another column
+ 
+      % multiply by a constant value and by another column
+      newCol = C1.mutiply(0.01);
+      anotherCol = C1.multiply(aDataset.col('numericCol'));
+ 
+      % with operator overloading
+      newCol = C1 .* 0.01;
+      anotherCol = C1 .* aDataset.col('numericCol');
+
+```
+
+*matlab.compiler.mlspark.Column.notEqual*
+
+```notalanguage
+  notEqual Compare column with another column or value for inequality
+ 
+  ne is the overloaded operator for this in MATLAB, and is also implemented
+  (see below)
+  
+  Example:
+ 
+      % C1 is a column
+      % C2 is a numeric value, logical value, or another column
+ 
+      % Compare column with a value or another column for inequality
+      newCol = C1.notEqual(0.01);
+      anotherCol = C1.notEqual(aDataset.col('numericCol'))
+ 
+      % Overloaded operator version
+      newCol = C1 ~= 0.01;
+      anotherCol = C1 ~= aDataset.col('numericCol')
+
+```
+
+*matlab.compiler.mlspark.Column.or*
+
+```notalanguage
+  or Boolean or for a column by another column or a value
+ 
+  or is also overloaded as an operator (see below)
+ 
+  Example:
+ 
+      % C1 is a column
+      % C2 is a value or another column
+ 
+      % "Or" by another column
+      anotherCol = C1.or(aDataset.col('numericCol'))
+ 
+      % Overloaded operator version
+      anotherCol = C1 | aDataset.col('numericCol')
+
+```
+
+*matlab.compiler.mlspark.Column.plus*
+
+```notalanguage
+  COL add a column to another column or a value
+ 
+  plus is also overloaded as an operator (see below)
+ 
+  Example:
+      % DS is a dataset
+      % C1 is a column 
+      % C2 is a value or another column
+ 
+      % 
+      C1 = DS.col("columnName");
+      C2 = DS.col("anotherColumnName");
+      DS2 = DS.withColumn("columnNameToAddOrReplace", C1.plus(10));
+      DS3 = DS.withColumn("columnNameToAddOrReplace", C1.plus(C2));
+ 
+      % with operator overloading
+      DS2 = DS.withColumn("columnNameToAddOrReplace", C1 + 10);
+      DS3 = DS.withColumn("columnNameToAddOrReplace", C1 + C2);
+
+```
+
+*matlab.compiler.mlspark.Column.sparkOtherwise*
+
+```notalanguage
+  SPARKOTHERWISE the default condition in a collection of calls to when()
+ 
+  The name of this method differs from normal Spark, as otherwise is a
+  reserved word in MATLAB.
+ 
+  This function will return a new column.
+ 
+  Example:
+ 
+      petCol = testCase.dsNames.col("Pet");
+         dsN = testCase.dsNames.withColumn(...
+             "testCol", ...
+              functions.when(petCol, "Cat", "C")...
+              .when(petCol, "Giraffe", "G")...
+              .when(petCol, "Iguana", "I")...
+             .sparkOtherwise("F"));
+
+```
+
+*matlab.compiler.mlspark.Column.when*
+
+```notalanguage
+  WHEN Creates a condition for multiple value expressions
+ 
+  origCol     - column used for the original call to when (functions.when)
+  testValue   - condition to test against (equals to)
+  resultValue - value the returned column will have if the condition is met
+ 
+  This function will return a new column
+ 
+  Example:
+ 
+      petCol = testCase.dsNames.col("Pet");
+      dsN = testCase.dsNames.withColumn(...
+          "testCol", ...
+          functions.when(petCol, "Cat", "C")...
+          .when(petCol, "Giraffe", "G")...
+          .when(petCol, "Iguana", "I")...
+          .sparkOtherwise("F"));
+ 
+  Copyright 2021 MathWorks, Inc.
 
 ```
 
@@ -1712,1135 +2856,6 @@ matlab.compiler.mlspark.Dataset/string is a function.
 
 ```
 
-
-#### matlab.compiler.mlspark.Catalog
-
-```notalanguage
-  CATALOG Class wrapping the Java Catalog object
-
-```
-
-*matlab.compiler.mlspark.Catalog.dropGlobalTempView*
-
-```notalanguage
-  DROPGLOBALTEMPVIEW Drop a global temporary view from a Spark session
- 
-  Returns true if the view is dropped successfully, false otherwise.
-  
-  
-  Example:
- 
-      B = catalog.dropGlobalTempView('MyTempTable');
-
-```
-
-*matlab.compiler.mlspark.Catalog.dropTempView*
-
-```notalanguage
-  DROPTEMPVIEW Drop a temporary view from a Spark session
- 
-  Returns true if the view is dropped successfully, false otherwise.
-  
-  
-  Example:
- 
-      B = catalog.dropTempView('MyTempTable');
-
-```
-
-*matlab.compiler.mlspark.Catalog.listTables*
-
-```notalanguage
-  LISTTABLES List database tables in a Spark session
- 
-  Returns a Dataset with the information.
-  
-  
-  Example:
- 
-      tDS = catalog.listTables();
-
-```
-
-
-#### matlab.compiler.mlspark.DataFrameWriter
-
-```notalanguage
-  DATAFRAMEWRITER Interface to write datasets to external storage systems
-   This object can be used to write to external storage systems such as 
-  file systems, key-value stores, etc. 
-  
-  Use SparkSession.write() to access this.
-
-```
-
-*matlab.compiler.mlspark.DataFrameWriter.format*
-
-```notalanguage
-  FORMAT Method to specify the output data source format
-  The format method can be used to configure the DataFrameWriter to use an
-  appropriate source format. 
-  
-  Built-in options include:
-    json
-    csv
-    parquet
-  etc.
- 
-  For example:
-  
-      myDataSet.write.format('parquet')...
-          .save(outputLocation);
-
-```
-
-*matlab.compiler.mlspark.DataFrameWriter.option*
-
-```notalanguage
-  OPTION Method to specify options for writer
- 
-  Built-in options include:
-
-```
-
-*matlab.compiler.mlspark.DataFrameWriter.parquet*
-
-```notalanguage
-  PARQUET Method to Saves the content of the DataFrame in Parquet format at the specified path.
-
-```
-
-*matlab.compiler.mlspark.DataFrameWriter.save*
-
-```notalanguage
-  SAVE Method to save the dataset to external storage systems
-  Use this method to save the object to storage in the specified format.
-  
-  For example:
-  
-    outputLocation = '/delta/sampletable';
-    sparkDataSet...
-      .write.format("delta")...
-      .save(outputLocation);
-
-```
-
-*matlab.compiler.mlspark.DataFrameWriter.saveAsTable*
-
-```notalanguage
-  SAVEASTABLE Method to save the dataset as a table
-  Use this method to save the object to storage in the specified format.
- 
-  For example:
- 
-    outputLocation = '/delta/sampletable';
-    DS.write.format("delta")...
-                .option("path", outputLocation)...
-                .saveAsTable("testTableName");
-
-```
-
-
-#### matlab.compiler.mlspark.Column
-
-```notalanguage
-  Column MATLAB class wrapper for Spark Java Column objects
-
-```
-
-*matlab.compiler.mlspark.Column.string*
-
-```notalanguage
-matlab.compiler.mlspark.Column/string is a function.
-    str = string(obj)
-
-```
-
-*matlab.compiler.mlspark.Column.char*
-
-```notalanguage
- CHAR Create character array
-    CHR = CHAR(X) converts array X of nonnegative integer codes into a
-    character array. Valid codes range from 0 to 65535, where codes 0 to
-    127 correspond to 7-bit ASCII characters. The characters that MATLAB
-    can process (other than 7-bit ASCII characters) depend on your current
-    locale setting. Use DOUBLE to convert characters to numeric codes.
- 
-    CHR = CHAR(C), when C is a cell array of character vectors, places each 
-    element of C into a row of the character array CHR. Use CELLSTR to
-    convert back.
- 
-    CHR = CHAR(STR), when STR is a string array, converts each element of STR into 
-    a row of the character array CHR. Use STRING to convert back.
- 
-    CHR = CHAR(T1,T2,T3,..) forms the character array CHR containing the
-    text from T1,T2,T3,... as rows. CHAR automatically pads each row with
-    spaces in order to form a character array. Each text parameter, Ti,
-    can itself be a character array. This allows the creation of
-    arbitrarily large character arrays. If Ti has no characters, then the
-    corresponding row of CHR is filled with spaces.
- 
-    See also STRING, DOUBLE, CELLSTR, ISCELLSTR, ISCHAR, ISSTRING.
-
-```
-
-*matlab.compiler.mlspark.Column.ne*
-
-```notalanguage
- ~= (NE)   Not equal relation for handles.
-    Handles are equal if they are handles for the same object and are 
-    unequal otherwise.
- 
-    H1 ~= H2 performs element-wise comparisons between handle arrays H1 
-    and H2.  H1 and H2 must be of the same dimensions unless one is a 
-    scalar.  The result is a logical array of the same dimensions, where 
-    each element is an element-wise equality result.
- 
-    If one of H1 or H2 is scalar, scalar expansion is performed and the 
-    result will match the dimensions of the array that is not scalar.
- 
-    TF = NE(H1, H2) stores the result in a logical array of the same
-    dimensions.
- 
-    See also MATLAB.COMPILER.MLSPARK.COLUMN, MATLAB.COMPILER.MLSPARK.COLUMN/EQ, MATLAB.COMPILER.MLSPARK.COLUMN/GE, MATLAB.COMPILER.MLSPARK.COLUMN/GT, MATLAB.COMPILER.MLSPARK.COLUMN/LE, MATLAB.COMPILER.MLSPARK.COLUMN/LT
-
-Help for matlab.compiler.mlspark.Column/ne is inherited from superclass handle
-
-```
-
-*matlab.compiler.mlspark.Column.eq*
-
-```notalanguage
- == (EQ)   Test handle equality.
-    Handles are equal if they are handles for the same object.
- 
-    H1 == H2 performs element-wise comparisons between handle arrays H1 and
-    H2.  H1 and H2 must be of the same dimensions unless one is a scalar.
-    The result is a logical array of the same dimensions, where each
-    element is an element-wise equality result.
- 
-    If one of H1 or H2 is scalar, scalar expansion is performed and the 
-    result will match the dimensions of the array that is not scalar.
- 
-    TF = EQ(H1, H2) stores the result in a logical array of the same 
-    dimensions.
- 
-    See also MATLAB.COMPILER.MLSPARK.COLUMN, MATLAB.COMPILER.MLSPARK.COLUMN/GE, MATLAB.COMPILER.MLSPARK.COLUMN/GT, MATLAB.COMPILER.MLSPARK.COLUMN/LE, MATLAB.COMPILER.MLSPARK.COLUMN/LT, MATLAB.COMPILER.MLSPARK.COLUMN/NE
-
-Help for matlab.compiler.mlspark.Column/eq is inherited from superclass handle
-
-```
-
-*matlab.compiler.mlspark.Column.le*
-
-```notalanguage
- <= (LE)   Less than or equal relation for handles.
-    Handles are equal if they are handles for the same object.  All 
-    comparisons use a number associated with each handle object.  Nothing
-    can be assumed about the result of a handle comparison except that the
-    repeated comparison of two handles in the same MATLAB session will 
-    yield the same result.  The order of handle values is purely arbitrary 
-    and has no connection to the state of the handle objects being 
-    compared.
- 
-    H1 <= H2 performs element-wise comparisons between handle arrays H1 and
-    H2.  H1 and H2 must be of the same dimensions unless one is a scalar.
-    The result is a logical array of the same dimensions, where each
-    element is an element-wise >= result.
- 
-    If one of H1 or H2 is scalar, scalar expansion is performed and the 
-    result will match the dimensions of the array that is not scalar.
- 
-    TF = LE(H1, H2) stores the result in a logical array of the same 
-    dimensions.
- 
-    See also MATLAB.COMPILER.MLSPARK.COLUMN, MATLAB.COMPILER.MLSPARK.COLUMN/EQ, MATLAB.COMPILER.MLSPARK.COLUMN/GE, MATLAB.COMPILER.MLSPARK.COLUMN/GT, MATLAB.COMPILER.MLSPARK.COLUMN/LT, MATLAB.COMPILER.MLSPARK.COLUMN/NE
-
-Help for matlab.compiler.mlspark.Column/le is inherited from superclass handle
-
-```
-
-*matlab.compiler.mlspark.Column.ge*
-
-```notalanguage
- >= (GE)   Greater than or equal relation for handles.
-    H1 >= H2 performs element-wise comparisons between handle arrays H1 and
-    H2.  H1 and H2 must be of the same dimensions unless one is a scalar.
-    The result is a logical array of the same dimensions, where each
-    element is an element-wise >= result.
- 
-    If one of H1 or H2 is scalar, scalar expansion is performed and the 
-    result will match the dimensions of the array that is not scalar.
- 
-    TF = GE(H1, H2) stores the result in a logical array of the same 
-    dimensions.
- 
-    See also MATLAB.COMPILER.MLSPARK.COLUMN, MATLAB.COMPILER.MLSPARK.COLUMN/EQ, MATLAB.COMPILER.MLSPARK.COLUMN/GT, MATLAB.COMPILER.MLSPARK.COLUMN/LE, MATLAB.COMPILER.MLSPARK.COLUMN/LT, MATLAB.COMPILER.MLSPARK.COLUMN/NE
-
-Help for matlab.compiler.mlspark.Column/ge is inherited from superclass handle
-
-```
-
-*matlab.compiler.mlspark.Column.as*
-
-```notalanguage
-matlab.compiler.mlspark.Column/as is a function.
-    col = as(obj, aliasName)
-
-```
-
-*matlab.compiler.mlspark.Column.not*
-
-```notalanguage
- ~   Logical NOT.
-    ~A performs a logical NOT of input array A, and returns an array
-    containing elements set to either logical 1 (TRUE) or logical 0 (FALSE).
-    An element of the output array is set to 1 if A contains a zero value
-    element at that same array location.  Otherwise, that element is set to 0.
- 
-    B = NOT(A) is called for the syntax '~A' when A is an object.
- 
-    ~ can also be used to ignore input arguments in a function definition,
-    and output arguments in a function call. 
-  
-    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
- 
-    See also AND, OR, XOR.
-
-```
-
-*matlab.compiler.mlspark.Column.uminus*
-
-```notalanguage
- -  Unary minus.
-    -A negates the elements of A.
- 
-    B = UMINUS(A) is called for the syntax '-A' when A is an object.
- 
-    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
-
-```
-
-*matlab.compiler.mlspark.Column.mrdivide*
-
-```notalanguage
- / Right matrix divide.
-    B/A is the matrix division of A into B, which is roughly the
-    same as B*INV(A) , except it is computed in a different way.
-    More precisely, B/A = (A'\B')'. See MLDIVIDE for details.
- 
-    C = MRDIVIDE(B,A) is called for the syntax 'B / A' when B or A is an object.
- 
-    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
- 
-    See also MLDIVIDE, RDIVIDE, LDIVIDE, PAGEMRDIVIDE.
-
-```
-
-*matlab.compiler.mlspark.Column.rdivide*
-
-```notalanguage
- ./  Right array divide.
-    A./B divides each element of A by the corresponding element of B. A and 
-    B must have compatible sizes. In the simplest cases, they can be the 
-    same size or one can be a scalar. Two inputs have compatible sizes if, 
-    for every dimension, the dimension sizes of the inputs are either the 
-    same or one of them is 1. The element-wise operators ./ and .\ are 
-    related to each other by the equation A./B = B.\A.
- 
-    C = RDIVIDE(A,B) is called for the syntax 'A ./ B' when A or B is an object.
- 
-    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
- 
-    See also LDIVIDE, MLDIVIDE, MRDIVIDE.
-
-```
-
-*matlab.compiler.mlspark.Column.mtimes*
-
-```notalanguage
- *   Matrix multiply.
-    X*Y is the matrix product of X and Y.  Any scalar (a 1-by-1 matrix)
-    may multiply anything.  Otherwise, the number of columns of X must
-    equal the number of rows of Y.
- 
-    C = MTIMES(A,B) is called for the syntax 'A * B' when A or B is an
-    object.
- 
-    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
- 
-    See also TIMES, PAGEMTIMES.
-
-```
-
-*matlab.compiler.mlspark.Column.times*
-
-```notalanguage
- .*  Array multiply.
-    X.*Y denotes element-by-element multiplication. X and Y must have
-    compatible sizes. In the simplest cases, they can be the same size or
-    one can be a scalar. Two inputs have compatible sizes if, for every
-    dimension, the dimension sizes of the inputs are either the same or one
-    of them is 1.
- 
-    C = TIMES(A,B) is called for the syntax 'A .* B' when A or B is an object.
- 
-    See <a href="matlab:helpview('matlab','MATLAB_OPS')">MATLAB Operators and Special Characters</a> for more details.
- 
-    See also MTIMES.
-
-```
-
-*matlab.compiler.mlspark.Column.and*
-
-```notalanguage
-  and Boolean and for a column by another column or a value
- 
-  and is also overloaded as an operator (see below)
- 
-  Example:
- 
-      % C1 is a column
-      % C2 is a value or another column
- 
-      % "And" by another column
-      anotherCol = C1.and(aDataset.col('numericCol'))
- 
-      % Overloaded operator version
-      anotherCol = C1 & aDataset.col('numericCol')
-
-```
-
-*matlab.compiler.mlspark.Column.between*
-
-```notalanguage
-  BETWEEN Filter entries in a certain range
- 
-  Example:
- 
-      % C1 is a column
- 
-      % Make the sort order descending
-      newCol = C1.between('2010-01-14', '2011-05-22');
-
-```
-
-*matlab.compiler.mlspark.Column.cast*
-
-```notalanguage
-  COL Cast the type of a column
- 
-  Example:
- 
-      % C1 is a column with a number but in string form
- 
-      % Cast it to an integer
-      newCol = C1.cast('int');
-
-```
-
-*matlab.compiler.mlspark.Column.desc*
-
-```notalanguage
-  DESC Set the sort order to descending for a column
- 
-  Example:
- 
-      % C1 is a column
- 
-      % Make the sort order descending
-      newCol = C1.desc();
-
-```
-
-*matlab.compiler.mlspark.Column.divide*
-
-```notalanguage
-  divide a column by another column or a value
- 
-  rdivide (element-wise) is also overloaded as an operator (see below)
- 
-  Example:
- 
-      % DS is a dataset
-      % C1 is a column 
-      % C2 is a value or another column
- 
-      % Divide by a constant value and by another column
-      C1 = DS.col("columnName");
-      C2 = DS.col("anotherColumnName");
-      DS2 = DS.withColumn("columnNameToAddOrReplace", C1.divide(10));
-      DS3 = DS.withColumn("columnNameToAddOrReplace", C1.divide(C2));
- 
-      % with operator overloading
-      DS2 = DS.withColumn("columnNameToAddOrReplace", C1 / 10);
-      DS3 = DS.withColumn("columnNameToAddOrReplace", C1 ./ C2);
-
-```
-
-*matlab.compiler.mlspark.Column.equalTo*
-
-```notalanguage
-  equalTo Compare column with another column or value for equality
- 
-  eq is the overloaded operator for this in MATLAB, and is also implemented
-  (see below)
- 
-  Example:
- 
-      % C1 is a column
-      % C2 is a numeric, logical or string value, or another column
- 
-      % Compare column with a constant value and another column
-      newCol = C1.equalTo(0.01);
-      anotherCol = C1.equalTo(aDataset.col('numericCol'))
- 
-      % Overloaded operator version
-      newCol = C1 == 0.01;
-      anotherCol = C1 == aDataset.col('numericCol')
-
-```
-
-*matlab.compiler.mlspark.Column.explain*
-
-```notalanguage
-  EXPLAIN Returns a string explanation of the column, or prints it to console for debugging
- 
-  explain(obj) displays a string explanation of the column in the console.
- 
-  explain(obj, extended) enables display of extended debugging information,
-  if the optional extended input is set to true (default=false).
- 
-  explanationStr = explain(_) returns the explanation as a string instead of
-  displaying it in the console;
- 
-  Example:
-      % DS is a dataset
-      % C1 is a column
- 
-      % Return an explanation of a column
-      C1 = DS.col("columnName");
-      explanation = C1.explain(true)    % => "columnName#307375"
- 
-      % Return an explanation of a modified column
-      explanation = explain(C1 + 1.5);  % => "(`columnName` + 1.5D)"
-
-```
-
-*matlab.compiler.mlspark.Column.geq*
-
-```notalanguage
-  ge Compare greater than or equal for a column by another column or a value
- 
-  ge is the overloaded operator for this in MATLAB, and is also implemented
-  (see below)
- 
-  Example:
- 
-      % C1 is a column
-      % C2 is a value or another column
- 
-      % Check which column items are >= a value or another column
-      newCol = C1.geq(0.01);
-      anotherCol = C1.geq(aDataset.col('numericCol'))
- 
-      % Overloaded operator version
-      newCol = C1 >= 0.01;
-      anotherCol = C1 >= aDataset.col('numericCol')
-
-```
-
-*matlab.compiler.mlspark.Column.gt*
-
-```notalanguage
-  gt Compare greater than for a column by another column or a value
- 
-  gt is also overloaded as an operator (see below)
- 
-  Example:
- 
-      % C1 is a column
-      % C2 is a value or another column
- 
-      % Check which column items are > a value or another column
-      newCol = C1.gt(0.01);
-      anotherCol = C1.gt(aDataset.col('numericCol'))
- 
-      % Overloaded operator version
-      newCol = C1 > 0.01;
-      anotherCol = C1 > aDataset.col('numericCol')
-
-```
-
-*matlab.compiler.mlspark.Column.isin*
-
-```notalanguage
-  ISIN Evaluates isin for a column
- 
-  Example: Reduce list of flights to the ones originating in SYR or
-  BWI.
-  airlines = spark.read.format("delta").load("/data/airlinedelay_delta_all")
-  airlines_part = airlines.filter(airlines.col("Origin").isin("SYR", "BWI"))
- 
-  The argument can also be a string array
-  airlines_part = airlines.filter(airlines.col("Origin").isin(["SYR", "BWI"]))
-
-```
-
-*matlab.compiler.mlspark.Column.leq*
-
-```notalanguage
-  lt Compare less than or equal for a column by another column or a value
- 
-  le is the overloaded operator for this in MATLAB, and is also implemented
-  (see below)
-  
-  Example:
- 
-      % C1 is a column
-      % C2 is a value or another column
- 
-      % Check which column items are <= a value or another column
-      newCol = C1.leq(0.01);
-      anotherCol = C1.leq(aDataset.col('numericCol'))
- 
-      % Overloaded operator version
-      newCol = C1 <= 0.01;
-      anotherCol = C1 <= aDataset.col('numericCol')
-
-```
-
-*matlab.compiler.mlspark.Column.lt*
-
-```notalanguage
-  lt Compare less than for a column by another column or a value
- 
-  lt is also the overloaded as an operator (see below)
- 
-  Example:
- 
-      % C1 is a column
-      % C2 is a value or another column
- 
-      % Check which column items are < a value or another column
-      newCol = C1.lt(0.01);
-      anotherCol = C1.lt(aDataset.col('numericCol'))
- 
-      % Overloaded operator version
-      newCol = C1 < 0.01;
-      anotherCol = C1 < aDataset.col('numericCol')
-
-```
-
-*matlab.compiler.mlspark.Column.minus*
-
-```notalanguage
-  COL subtract a column by another column or a value
- 
-  minus is also overloaded as an operator (see below)
- 
-  Example:
-      % DS is a dataset
-      % C1 is a column 
-      % C2 is a value or another column
- 
-      % Subtract a constant value and another column
-      C1 = DS.col("columnName");
-      C2 = DS.col("anotherColumnName");
-      DS2 = DS.withColumn("columnNameToAddOrReplace", C1.minus(10));
-      DS3 = DS.withColumn("columnNameToAddOrReplace", C1.minus(C2));
- 
-      % with operator overloading
-      DS2 = DS.withColumn("columnNameToAddOrReplace", C1 - 10);
-      DS3 = DS.withColumn("columnNameToAddOrReplace", C1 - C2);
-
-```
-
-*matlab.compiler.mlspark.Column.multiply*
-
-```notalanguage
-  COL multiply a column by another column or a value
- 
-  times (element-wise) is also overloaded as an operator (see below)
-  
-  Example:
- 
-      % C1 is a column
-      % C2 is a value or another column
- 
-      % multiply by a constant value and by another column
-      newCol = C1.mutiply(0.01);
-      anotherCol = C1.multiply(aDataset.col('numericCol'));
- 
-      % with operator overloading
-      newCol = C1 .* 0.01;
-      anotherCol = C1 .* aDataset.col('numericCol');
-
-```
-
-*matlab.compiler.mlspark.Column.notEqual*
-
-```notalanguage
-  notEqual Compare column with another column or value for inequality
- 
-  ne is the overloaded operator for this in MATLAB, and is also implemented
-  (see below)
-  
-  Example:
- 
-      % C1 is a column
-      % C2 is a numeric value, logical value, or another column
- 
-      % Compare column with a value or another column for inequality
-      newCol = C1.notEqual(0.01);
-      anotherCol = C1.notEqual(aDataset.col('numericCol'))
- 
-      % Overloaded operator version
-      newCol = C1 ~= 0.01;
-      anotherCol = C1 ~= aDataset.col('numericCol')
-
-```
-
-*matlab.compiler.mlspark.Column.or*
-
-```notalanguage
-  or Boolean or for a column by another column or a value
- 
-  or is also overloaded as an operator (see below)
- 
-  Example:
- 
-      % C1 is a column
-      % C2 is a value or another column
- 
-      % "Or" by another column
-      anotherCol = C1.or(aDataset.col('numericCol'))
- 
-      % Overloaded operator version
-      anotherCol = C1 | aDataset.col('numericCol')
-
-```
-
-*matlab.compiler.mlspark.Column.plus*
-
-```notalanguage
-  COL add a column to another column or a value
- 
-  plus is also overloaded as an operator (see below)
- 
-  Example:
-      % DS is a dataset
-      % C1 is a column 
-      % C2 is a value or another column
- 
-      % 
-      C1 = DS.col("columnName");
-      C2 = DS.col("anotherColumnName");
-      DS2 = DS.withColumn("columnNameToAddOrReplace", C1.plus(10));
-      DS3 = DS.withColumn("columnNameToAddOrReplace", C1.plus(C2));
- 
-      % with operator overloading
-      DS2 = DS.withColumn("columnNameToAddOrReplace", C1 + 10);
-      DS3 = DS.withColumn("columnNameToAddOrReplace", C1 + C2);
-
-```
-
-*matlab.compiler.mlspark.Column.sparkOtherwise*
-
-```notalanguage
-  SPARKOTHERWISE the default condition in a collection of calls to when()
- 
-  The name of this method differs from normal Spark, as otherwise is a
-  reserved word in MATLAB.
- 
-  This function will return a new column.
- 
-  Example:
- 
-      petCol = testCase.dsNames.col("Pet");
-         dsN = testCase.dsNames.withColumn(...
-             "testCol", ...
-              functions.when(petCol, "Cat", "C")...
-              .when(petCol, "Giraffe", "G")...
-              .when(petCol, "Iguana", "I")...
-             .sparkOtherwise("F"));
-
-```
-
-*matlab.compiler.mlspark.Column.when*
-
-```notalanguage
-  WHEN Creates a condition for multiple value expressions
- 
-  origCol     - column used for the original call to when (functions.when)
-  testValue   - condition to test against (equals to)
-  resultValue - value the returned column will have if the condition is met
- 
-  This function will return a new column
- 
-  Example:
- 
-      petCol = testCase.dsNames.col("Pet");
-      dsN = testCase.dsNames.withColumn(...
-          "testCol", ...
-          functions.when(petCol, "Cat", "C")...
-          .when(petCol, "Giraffe", "G")...
-          .when(petCol, "Iguana", "I")...
-          .sparkOtherwise("F"));
- 
-  Copyright 2021 MathWorks, Inc.
-
-```
-
-
-#### matlab.compiler.mlspark.DataFrameReader
-
-```notalanguage
-  DATAFRAMEREADER Interface used to load a Dataset from external storage systems 
-  This object can be used to read from external storage systems such as 
-  file systems, key-value stores, etc. 
-  
-  Use SparkSession.read() to access this.
-
-```
-
-*matlab.compiler.mlspark.DataFrameReader.format*
-
-```notalanguage
-  FORMAT Method to specify the input data source format
-  The format method can be used to configure the DataFrameReader to use an
-  appropriate source format. 
-  
-  Supported data formats include:
-    json
-    csv
-    parquet
-    orc
-    text
-    jdbc
-    libsvm
-    delta
- 
-  For example:
-  
-      myDataSet = spark...
-          .read.format('csv')...
-          .option('header','true')...
-          .option('inferSchema','true')...
-          .load(inputLocation);
-
-```
-
-*matlab.compiler.mlspark.DataFrameReader.jdbc*
-
-```notalanguage
-  JDBC Method to Construct a dataframe representing a database table
-  Construct a DataFrame representing the database table accessible via JDBC URL url named table and connection properties.
-  
-  To read from a MySQL database:
-  
-      %% Imports
-      import java.util.Properties;
-                  
-      % Create properties for the connection
-      connectionProperties = Properties();
-  
-      % Please consider using secretes to store this info
-      connectionProperties.put("user", "ahosagra@mysql-test");
-      connectionProperties.put("password", "DummyPassword#");
-  
-      %% Create a Spark configuration and shared Spark session
-      import matlab.compiler.mlspark.*;
-  
-      % Set the location for temporary files
-      sparkProperties = containers.Map({'spark.executorEnv.MCR_CACHE_ROOT'},{'/tmp/matlabapp'});
-  
-      % Setup configuration to run locally
-      conf = SparkConf( ...
-          'Master','local',...
-          'AppName','DBConnectDemo', ...
-          'SparkProperties',sparkProperties, ...
-          "SparkVersion", "2" ...
-          );
-  
-      % This will create a singleton SparkSession using the getOrCreate() method
-      spark = SparkSession(conf);
- 
-  Finally, a dataset can be created using:
-      dbConnString = 'jdbc:mysql://mysql-test.mwlab.io:3306/test_database?useSSL=true&requireSSL=false';   
-      df = spark.read.jdbc(dbConnString,...
-          'test_binary',...
-          connectionProperties);
-  
-      % Spark Dataset
-      df = matlab.compiler.mlspark.Dataset(dfj);
-  
-      % Marshal to a table
-      mlTable = table(df);
-
-```
-
-*matlab.compiler.mlspark.DataFrameReader.load*
-
-```notalanguage
-  LOAD Method to load the input in as a Dataframe / Dataset
-  The input datasource in as a dataframe / dataset.
- 
-  For example:
- 
-      myDataSet = spark...
-          .read.format('csv')...
-          .option('header','true')...
-          .option('inferSchema','true')...
-          .load(inputLocation);
-
-```
-
-*matlab.compiler.mlspark.DataFrameReader.option*
-
-```notalanguage
-  OPTION Method to specify input options for the underlying data source
-  The configuration of the underlying input options control how the data
-  source is handled.
-  
-  For example, to indicate that the input CSV has a header lines and is
-  clean enough to infer the schema:
-  
-      myDataSet = spark...
-          .read.format('csv')...
-          .option('header','true')...
-          .option('inferSchema','true')...
-          .load(inputLocation);
-
-```
-
-*matlab.compiler.mlspark.DataFrameReader.schema*
-
-```notalanguage
-  SCHEMA Specify the schema to be used when loading data.
- 
-  For example, to indicate that the input CSV has a header lines and is
-  clean enough to infer the schema:
- 
-      myDataSet = spark...
-          .read.format('json')...
-          .schema("`time` TIMESTAMP, `action` STRING") ...
-          .load(inputLocation);
-
-```
-
-
-#### matlab.compiler.mlspark.RelationalGroupedDataset
-
-```notalanguage
-  RelationalGroupedDataset Special dataset, returned by methods like groupBy.
-
-```
-
-*matlab.compiler.mlspark.RelationalGroupedDataset.agg*
-
-```notalanguage
-  AGG Aggregate the the elements using columns
- 
-  Example:
-
-```
-
-*matlab.compiler.mlspark.RelationalGroupedDataset.count*
-
-```notalanguage
-  COUNT Count the elements in the different groups in the dataset
-
-```
-
-*matlab.compiler.mlspark.RelationalGroupedDataset.mean*
-
-```notalanguage
-  MEAN Calculates the mean of the columns given as arguments
-
-```
-
-*matlab.compiler.mlspark.RelationalGroupedDataset.sum*
-
-```notalanguage
-  SUM Sum the elements in a RelationalGroupDataset
-
-```
-
-
-#### matlab.compiler.mlspark.SparkSession
-
-```notalanguage
-  SPARKSESSION Entry point to programming Spark with the Dataset and DataFrame API
-  The Spark Context is retrieved using the .getOrCreate to return the shared Spark
-  Context as required by Spark.
- 
-  For example to create a session:
-    % Create a Spark configuration and shared Spark session
- 
-      conf = createJavaSparkConf( ...
-          'Master', 'local',...
-          'AppName', 'mysession', ...
-          'SparkProperties', getDefaultSparkProperties ...
-          );
- 
-    % This will create a singleton SparkSession using the getOrCreate() method
-    spark = matlab.compiler.mlspark.SparkSession(conf);
-
-```
-
-*matlab.compiler.mlspark.SparkSession.setCheckpointDir*
-
-```notalanguage
-matlab.compiler.mlspark.SparkSession/setCheckpointDir is a function.
-    setCheckpointDir(obj, dirName)
-
-```
-
-*matlab.compiler.mlspark.SparkSession.setLogLevel*
-
-```notalanguage
-matlab.compiler.mlspark.SparkSession/setLogLevel is a function.
-    setLogLevel(obj, logLevel)
-
-```
-
-*matlab.compiler.mlspark.SparkSession.getSparkConf*
-
-```notalanguage
-matlab.compiler.mlspark.SparkSession/getSparkConf is a function.
-    result = getSparkConf(obj)
-
-```
-
-*matlab.compiler.mlspark.SparkSession.delete*
-
-```notalanguage
- DELETE   Delete a handle object.
-    DELETE(H) deletes all handle objects in array H. After the delete 
-    function call, H is an array of invalid objects.
- 
-    See also MATLAB.COMPILER.MLSPARK.SPARKSESSION, MATLAB.COMPILER.MLSPARK.SPARKSESSION/ISVALID, CLEAR
-
-Help for matlab.compiler.mlspark.SparkSession/delete is inherited from superclass handle
-
-```
-
-*matlab.compiler.mlspark.SparkSession.addtoBroadcastList*
-
-```notalanguage
-matlab.compiler.mlspark.SparkSession/addtoBroadcastList is a function.
-    addtoBroadcastList(obj, bobj)
-
-```
-
-*matlab.compiler.mlspark.SparkSession.getJavaStorageLevel*
-
-```notalanguage
-matlab.compiler.mlspark.SparkSession/getJavaStorageLevel is a function.
-    result = getJavaStorageLevel(obj, storageLvl)
-
-```
-
-*matlab.compiler.mlspark.SparkSession.catalog*
-
-```notalanguage
-  CATALOG Return a catalog from a Spark session.
- 
-  This will return a new dataset, sorted by the column names provided
-  Example:
- 
-      C = spark.catalog();
-
-```
-
-*matlab.compiler.mlspark.SparkSession.range*
-
-```notalanguage
-  RANGE Method to create a dataset with a single long column
-  Creates a single column dataset, returning the result as a DataFrame. 
-  
-  The method accepts the start, end (exclusive) and defaults to a step size
-  of 1. It is also possible to specify the number of partitions.
-  
-  Example:
-  
-    % Create a range of 10 long integers
-    myDS = spark.range(0,10);
-    
-    % Create a range of 20 long integers with a step size of 2
-    myDS = spark.range(0, 20, 2);
-  
-    % Create a range with a specific number of partitions (5 in this case)
-    myDS = spark.range(0, 20, 2, 5);
-
-```
-
-*matlab.compiler.mlspark.SparkSession.read*
-
-```notalanguage
-  READ Method to get the dataframe reader from the current SparkSession
-  Returns a DataFrameReader that can be used to read non-streaming data in as a DataFrame.
-  
-  Please see SparkSession to create a shared spark context. 
-  
-        % Create a shared SparkSession  
-        spark = SparkSession(conf);
-        
-        % Get the dataframe reader
-        dfreader = spark.read();
-
-```
-
-*matlab.compiler.mlspark.SparkSession.sparkContext*
-
-```notalanguage
-  SPARKCONTEXT Method to return the sparkContext from the SparkSession
-  The spark context for a given SparkSession object is returned as a handle
-  to the user.
-
-```
-
-*matlab.compiler.mlspark.SparkSession.sql*
-
-```notalanguage
-  SQL Method to invoke a SQL Query
-  Executes a SQL query using Spark, returning the result as a DataFrame. 
-  
-  For example: 
-  
-    spark = matlab.compiler.mlspark.SparkSession(sparkConf)
-    tblF = spark.sql('SELECT col from test.TestTable limit 10');
-
-```
-
-*matlab.compiler.mlspark.SparkSession.table*
-
-```notalanguage
-  TABLE Method to returns the specified table/view as a DataFrame
-  Executes a SQL query using Spark, returning the result as a DataFrame. 
-  
-    spark = matlab.compiler.mlspark.SparkSession(sparkConf)
-    tblF = spark.table('test.TestTable');
-
-```
-
-*matlab.compiler.mlspark.SparkSession.write*
-
-```notalanguage
-  WRITE Method to get the dataframe writer from the current SparkSession
-  Returns a DataFrameWriter that can be used to write data through a DataFrame.
-  
-  Please see SparkSession to create a shared spark context. 
-  
-        % Create a shared SparkSession  
-        spark = SparkSession(conf);
-        
-        % Get the dataframe writer
-        dfwriter = spark.write();
-
-```
-
 ##### matlab.compiler.mlspark.functions.abs
 
 ```notalanguage
@@ -4159,129 +4174,6 @@ matlab.compiler.mlspark.SparkSession/getJavaStorageLevel is a function.
 ```
 
 
-#### compiler.build.spark.JavaClass
-
-```notalanguage
-  JAVACLASS Class for generating a Javaclass with MATLAB Compiler SDK
- 
-  This class contains methods for adapting the generated code of the
-  corrsponding Java files.
-
-```
-
-*compiler.build.spark.JavaClass.getMCRFactoryName*
-
-```notalanguage
-compiler.build.spark.JavaClass/getMCRFactoryName is a function.
-    name = getMCRFactoryName(obj)
-
-```
-
-*compiler.build.spark.JavaClass.getFullClassName*
-
-```notalanguage
-compiler.build.spark.JavaClass/getFullClassName is a function.
-    fullName = getFullClassName(obj)
-
-```
-
-*compiler.build.spark.JavaClass.genPartitionTableFile*
-
-```notalanguage
-compiler.build.spark.JavaClass/genPartitionTableFile is a function.
-    outName = genPartitionTableFile(obj, F, partitionName)
-
-```
-
-*compiler.build.spark.JavaClass.genPartitionFile*
-
-```notalanguage
-compiler.build.spark.JavaClass/genPartitionFile is a function.
-    outName = genPartitionFile(obj, F, partitionName)
-
-```
-
-*compiler.build.spark.JavaClass.genPartitionHelpers*
-
-```notalanguage
-  First, remove any ephemeral files
-
-```
-
-*compiler.build.spark.JavaClass.runInjections*
-
-```notalanguage
-compiler.build.spark.JavaClass/runInjections is a function.
-    runInjections(obj, package)
-
-```
-
-*compiler.build.spark.JavaClass.getEphemeralFileNames*
-
-```notalanguage
-compiler.build.spark.JavaClass/getEphemeralFileNames is a function.
-    fileNames = getEphemeralFileNames(obj)
-
-```
-
-*compiler.build.spark.JavaClass.getFileNames*
-
-```notalanguage
-compiler.build.spark.JavaClass/getFileNames is a function.
-    fileNames = getFileNames(obj)
-
-```
-
-*compiler.build.spark.JavaClass.addInjection*
-
-```notalanguage
-compiler.build.spark.JavaClass/addInjection is a function.
-    addInjection(obj, func)
-
-```
-
-*compiler.build.spark.JavaClass.getClassBuild*
-
-```notalanguage
-compiler.build.spark.JavaClass/getClassBuild is a function.
-    build = getClassBuild(obj)
-
-```
-
-*compiler.build.spark.JavaClass.getBuildTarget*
-
-```notalanguage
-compiler.build.spark.JavaClass/getBuildTarget is a function.
-    buildTgt = getBuildTarget(obj, pkg)
-
-```
-
-*compiler.build.spark.JavaClass.addBuildFile*
-
-```notalanguage
-compiler.build.spark.JavaClass/addBuildFile is a function.
-    addBuildFile(obj, file, ephemeral)
-
-```
-
-*compiler.build.spark.JavaClass.fixSerializable*
-
-```notalanguage
-  fixSerializable Add Serializable to classes
- 
-  This adds a implements java.io.Serializable to certain classes, in
-  the releases of MATLAB where it wouldn't be present.
-
-```
-
-*compiler.build.spark.JavaClass.genSparkWrappers*
-
-```notalanguage
-  genSparkWrappers File to generate helper functions in Java
-
-```
-
-
 #### compiler.build.spark.SparkBuilder
 
 ```notalanguage
@@ -4344,13 +4236,6 @@ compiler.build.spark.SparkBuilder/addPackageDependency is a function.
 ```notalanguage
 compiler.build.spark.SparkBuilder/addClass is a function.
     addClass(obj, classObj)
-
-```
-
-*compiler.build.spark.SparkBuilder.rerunBuild*
-
-```notalanguage
-  rerunBuild Runs the build steps after modification
 
 ```
 
@@ -4512,157 +4397,133 @@ compiler.build.spark.SparkBuilder/runCommand is a function.
 
 ```
 
-
-#### compiler.build.spark.PythonSparkBuilder
+*compiler.build.spark.SparkBuilder.rerunBuild*
 
 ```notalanguage
-  PythonSparkBuilder Class for compiling MATLAB files for Spark
+  rerunBuild Runs the build steps after modification
+
+```
+
+
+#### compiler.build.spark.JavaClass
+
+```notalanguage
+  JAVACLASS Class for generating a Javaclass with MATLAB Compiler SDK
  
-  This class is a wrapper for the build process in different
-  SparkContexts. 
-  The base, and most important use case, is for building Python
-  libraries, with wrappers for making the code more palatable to Spark.
+  This class contains methods for adapting the generated code of the
+  corrsponding Java files.
+
+```
+
+*compiler.build.spark.JavaClass.getMCRFactoryName*
+
+```notalanguage
+compiler.build.spark.JavaClass/getMCRFactoryName is a function.
+    name = getMCRFactoryName(obj)
+
+```
+
+*compiler.build.spark.JavaClass.getFullClassName*
+
+```notalanguage
+compiler.build.spark.JavaClass/getFullClassName is a function.
+    fullName = getFullClassName(obj)
+
+```
+
+*compiler.build.spark.JavaClass.genPartitionTableFile*
+
+```notalanguage
+compiler.build.spark.JavaClass/genPartitionTableFile is a function.
+    outName = genPartitionTableFile(obj, F, partitionName)
+
+```
+
+*compiler.build.spark.JavaClass.genPartitionFile*
+
+```notalanguage
+compiler.build.spark.JavaClass/genPartitionFile is a function.
+    outName = genPartitionFile(obj, F, partitionName)
+
+```
+
+*compiler.build.spark.JavaClass.genPartitionHelpers*
+
+```notalanguage
+  First, remove any ephemeral files
+
+```
+
+*compiler.build.spark.JavaClass.runInjections*
+
+```notalanguage
+compiler.build.spark.JavaClass/runInjections is a function.
+    runInjections(obj, package)
+
+```
+
+*compiler.build.spark.JavaClass.getEphemeralFileNames*
+
+```notalanguage
+compiler.build.spark.JavaClass/getEphemeralFileNames is a function.
+    fileNames = getEphemeralFileNames(obj)
+
+```
+
+*compiler.build.spark.JavaClass.getFileNames*
+
+```notalanguage
+compiler.build.spark.JavaClass/getFileNames is a function.
+    fileNames = getFileNames(obj)
+
+```
+
+*compiler.build.spark.JavaClass.addInjection*
+
+```notalanguage
+compiler.build.spark.JavaClass/addInjection is a function.
+    addInjection(obj, func)
+
+```
+
+*compiler.build.spark.JavaClass.getClassBuild*
+
+```notalanguage
+compiler.build.spark.JavaClass/getClassBuild is a function.
+    build = getClassBuild(obj)
+
+```
+
+*compiler.build.spark.JavaClass.getBuildTarget*
+
+```notalanguage
+compiler.build.spark.JavaClass/getBuildTarget is a function.
+    buildTgt = getBuildTarget(obj, pkg)
+
+```
+
+*compiler.build.spark.JavaClass.addBuildFile*
+
+```notalanguage
+compiler.build.spark.JavaClass/addBuildFile is a function.
+    addBuildFile(obj, file, ephemeral)
+
+```
+
+*compiler.build.spark.JavaClass.fixSerializable*
+
+```notalanguage
+  fixSerializable Add Serializable to classes
  
-   Please refer to the documentation delivered in this package for
-   usage examples.
+  This adds a implements java.io.Serializable to certain classes, in
+  the releases of MATLAB where it wouldn't be present.
 
 ```
 
-*compiler.build.spark.PythonSparkBuilder.addFile*
+*compiler.build.spark.JavaClass.genSparkWrappers*
 
 ```notalanguage
-compiler.build.spark.PythonSparkBuilder/addFile is a function.
-    addFile(obj, file)
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.useMetrics*
-
-```notalanguage
-  useMetrics Helper method to decide if to use Metrics
- 
-  This is an internal function
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.genPartitionHelperFiles*
-
-```notalanguage
-  genPartitionHelperFiles
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.generateFunctionWrapper*
-
-```notalanguage
-  generateFunctionWrapper Wrapper for generating interface for one
-  function
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.getFileArguments*
-
-```notalanguage
-compiler.build.spark.PythonSparkBuilder/getFileArguments is a function.
-    [raw, args] = getFileArguments(~, file)
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.init*
-
-```notalanguage
-compiler.build.spark.PythonSparkBuilder/init is a function.
-    init(obj)
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.addHelperFilesToBuild*
-
-```notalanguage
-  addHelperFilesToBuild
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.build*
-
-```notalanguage
-  build Start the build
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.clean*
-
-```notalanguage
-  clean Clean the builld
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.createWheel*
-
-```notalanguage
-  createWheel Create a wheel for the Python package
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.generateSparkShellHelper*
-
-```notalanguage
-  generateSparkShellHelper Generate a shell script for interactive test
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.generateWrapper*
-
-```notalanguage
-  generateWrapper Wrapper for easier handling of Python library
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.genPartitionHelpers*
-
-```notalanguage
-  genPartitionHelpers
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.genPythonSetup*
-
-```notalanguage
-  genPythonSetup Create new setup.py file for install/dist/etc.
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.getAPIs*
-
-```notalanguage
-  getAPIs Retrieve APIs from File entries
- 
-  These APIs consist of the python helper functions generated.
-  The output can be either flat (default), or structured. In the
-  structured case, the APIs are organized by the file they were
-  generated for.
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.getWheelFile*
-
-```notalanguage
-  getWheelFile Return name of wheel file
-
-```
-
-*compiler.build.spark.PythonSparkBuilder.uploadWheelToDatabricks*
-
-```notalanguage
-  uploadWheelToDatabricks Upload wheel to Databricks
- 
-  This method only makes sense when using the matlab-spark-api package
-  in a Databricks context.
- 
-  Please note that this method can only upload files to DBFS. If using
-  other storage, e.g. s3, it has to be uploaded by other means. The
-  library can still be easily installed, using similar code as at the
-  bottom of this method (see databricks.Library).
+  genSparkWrappers File to generate helper functions in Java
 
 ```
 
@@ -4890,6 +4751,331 @@ compiler.build.spark.File/init is a function.
 
 ```notalanguage
   hasOutputArrays Returns true if there are arrays in the output columns
+
+```
+
+
+#### compiler.build.spark.PythonSparkBuilder
+
+```notalanguage
+  PythonSparkBuilder Class for compiling MATLAB files for Spark
+ 
+  This class is a wrapper for the build process in different
+  SparkContexts. 
+  The base, and most important use case, is for building Python
+  libraries, with wrappers for making the code more palatable to Spark.
+ 
+   Please refer to the documentation delivered in this package for
+   usage examples.
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.addFile*
+
+```notalanguage
+compiler.build.spark.PythonSparkBuilder/addFile is a function.
+    addFile(obj, file)
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.useMetrics*
+
+```notalanguage
+  useMetrics Helper method to decide if to use Metrics
+ 
+  This is an internal function
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.genPartitionHelperFiles*
+
+```notalanguage
+  genPartitionHelperFiles
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.generateFunctionWrapper*
+
+```notalanguage
+  generateFunctionWrapper Wrapper for generating interface for one
+  function
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.getFileArguments*
+
+```notalanguage
+compiler.build.spark.PythonSparkBuilder/getFileArguments is a function.
+    [raw, args] = getFileArguments(~, file)
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.init*
+
+```notalanguage
+compiler.build.spark.PythonSparkBuilder/init is a function.
+    init(obj)
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.addHelperFilesToBuild*
+
+```notalanguage
+  addHelperFilesToBuild
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.build*
+
+```notalanguage
+  build Start the build
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.clean*
+
+```notalanguage
+  clean Clean the builld
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.createWheel*
+
+```notalanguage
+  createWheel Create a wheel for the Python package
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.generateSparkShellHelper*
+
+```notalanguage
+  generateSparkShellHelper Generate a shell script for interactive test
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.generateWrapper*
+
+```notalanguage
+  generateWrapper Wrapper for easier handling of Python library
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.genPartitionHelpers*
+
+```notalanguage
+  genPartitionHelpers
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.genPythonSetup*
+
+```notalanguage
+  genPythonSetup Create new setup.py file for install/dist/etc.
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.getAPIs*
+
+```notalanguage
+  getAPIs Retrieve APIs from File entries
+ 
+  These APIs consist of the python helper functions generated.
+  The output can be either flat (default), or structured. In the
+  structured case, the APIs are organized by the file they were
+  generated for.
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.getWheelFile*
+
+```notalanguage
+  getWheelFile Return name of wheel file
+
+```
+
+*compiler.build.spark.PythonSparkBuilder.uploadWheelToDatabricks*
+
+```notalanguage
+  uploadWheelToDatabricks Upload wheel to Databricks
+ 
+  This method only makes sense when using the matlab-spark-api package
+  in a Databricks context.
+ 
+  Please note that this method can only upload files to DBFS. If using
+  other storage, e.g. s3, it has to be uploaded by other means. The
+  library can still be easily installed, using similar code as at the
+  bottom of this method (see databricks.Library).
+
+```
+
+
+#### compiler.build.spark.buildtype.JavaLib
+
+```notalanguage
+  JavaLib BuildType for java libraries
+
+```
+
+*compiler.build.spark.buildtype.JavaLib.getClassBuild*
+
+```notalanguage
+compiler.build.spark.buildtype.JavaLib/getClassBuild is a function.
+    str = getClassBuild(obj)
+
+```
+
+*compiler.build.spark.buildtype.JavaLib.getLinkArgument*
+
+```notalanguage
+compiler.build.spark.buildtype.JavaLib/getLinkArgument is a function.
+    str = getLinkArgument(obj)
+
+```
+
+*compiler.build.spark.buildtype.JavaLib.getBuildTarget*
+
+```notalanguage
+compiler.build.spark.buildtype.JavaLib/getBuildTarget is a function.
+    str = getBuildTarget(obj)
+
+```
+
+*compiler.build.spark.buildtype.JavaLib.mccOpts*
+
+```notalanguage
+compiler.build.spark.buildtype.JavaLib/mccOpts is a function.
+    opts = mccOpts(~)
+
+```
+
+
+#### compiler.build.spark.buildtype.BaseType
+
+```notalanguage
+  BaseType Base type for Spark Build types
+
+```
+
+*compiler.build.spark.buildtype.BaseType.getClassBuild*
+
+```notalanguage
+compiler.build.spark.buildtype.BaseType/getClassBuild is a function.
+    obj = compiler.build.spark.buildtype.BaseType
+
+```
+
+*compiler.build.spark.buildtype.BaseType.getLinkArgument*
+
+```notalanguage
+compiler.build.spark.buildtype.BaseType/getLinkArgument is a function.
+    obj = compiler.build.spark.buildtype.BaseType
+
+```
+
+*compiler.build.spark.buildtype.BaseType.getBuildTarget*
+
+```notalanguage
+compiler.build.spark.buildtype.BaseType/getBuildTarget is a function.
+    obj = compiler.build.spark.buildtype.BaseType
+
+```
+
+*compiler.build.spark.buildtype.BaseType.mccOpts*
+
+```notalanguage
+compiler.build.spark.buildtype.BaseType/mccOpts is a function.
+    obj = compiler.build.spark.buildtype.BaseType
+
+```
+
+*compiler.build.spark.buildtype.BaseType.log*
+
+```notalanguage
+ LOG    Natural logarithm.
+    LOG(X) is the natural logarithm of the elements of X.
+    Complex results are produced if X is not positive.
+ 
+    See also LOG1P, LOG2, LOG10, EXP, LOGM, REALLOG.
+
+```
+
+
+#### compiler.build.spark.buildtype.SparkApi
+
+```notalanguage
+  SparkApi BuildType for spark (used with tall)
+
+```
+
+*compiler.build.spark.buildtype.SparkApi.getClassBuild*
+
+```notalanguage
+compiler.build.spark.buildtype.SparkApi/getClassBuild is a function.
+    str = getClassBuild(obj)
+
+```
+
+*compiler.build.spark.buildtype.SparkApi.getLinkArgument*
+
+```notalanguage
+compiler.build.spark.buildtype.SparkApi/getLinkArgument is a function.
+    str = getLinkArgument(obj)
+
+```
+
+*compiler.build.spark.buildtype.SparkApi.getBuildTarget*
+
+```notalanguage
+compiler.build.spark.buildtype.SparkApi/getBuildTarget is a function.
+    str = getBuildTarget(obj)
+
+```
+
+*compiler.build.spark.buildtype.SparkApi.mccOpts*
+
+```notalanguage
+compiler.build.spark.buildtype.SparkApi/mccOpts is a function.
+    opts = mccOpts(~)
+
+```
+
+
+#### compiler.build.spark.buildtype.SparkTall
+
+```notalanguage
+  SparkTall BuildType for spark (used with tall)
+
+```
+
+*compiler.build.spark.buildtype.SparkTall.getClassBuild*
+
+```notalanguage
+compiler.build.spark.buildtype.SparkTall/getClassBuild is a function.
+    str = getClassBuild(obj)
+
+```
+
+*compiler.build.spark.buildtype.SparkTall.getLinkArgument*
+
+```notalanguage
+compiler.build.spark.buildtype.SparkTall/getLinkArgument is a function.
+    str = getLinkArgument(~)
+
+```
+
+*compiler.build.spark.buildtype.SparkTall.getBuildTarget*
+
+```notalanguage
+compiler.build.spark.buildtype.SparkTall/getBuildTarget is a function.
+    str = getBuildTarget(obj)
+
+```
+
+*compiler.build.spark.buildtype.SparkTall.mccOpts*
+
+```notalanguage
+compiler.build.spark.buildtype.SparkTall/mccOpts is a function.
+    opts = mccOpts(~)
 
 ```
 
@@ -5146,33 +5332,65 @@ compiler.build.spark.types.ArgType/init is a function.
 ```
 
 
-#### compiler.build.spark.types.Boolean
+#### compiler.build.spark.types.String
 
 ```notalanguage
-  Boolean Class used for SparkBuilder datatype handling
+  String Class used for SparkBuilder datatype handling
 
 ```
 
-*compiler.build.spark.types.Boolean.convertMWToRetValue*
+*compiler.build.spark.types.String.convertMWToRetValue*
 
 ```notalanguage
-compiler.build.spark.types.Boolean/convertMWToRetValue is a function.
+compiler.build.spark.types.String/convertMWToRetValue is a function.
     str = convertMWToRetValue(obj, srcData)
 
 ```
 
-*compiler.build.spark.types.Boolean.getEncoderInstantiation*
+*compiler.build.spark.types.String.getEncoderInstantiation*
 
 ```notalanguage
-compiler.build.spark.types.Boolean/getEncoderInstantiation is a function.
+compiler.build.spark.types.String/getEncoderInstantiation is a function.
     encInst = getEncoderInstantiation(obj)
 
 ```
 
-*compiler.build.spark.types.Boolean.getEncoderType*
+*compiler.build.spark.types.String.getEncoderType*
 
 ```notalanguage
-compiler.build.spark.types.Boolean/getEncoderType is a function.
+compiler.build.spark.types.String/getEncoderType is a function.
+    encType = getEncoderType(obj)
+
+```
+
+
+#### compiler.build.spark.types.Long
+
+```notalanguage
+  Long Class used for SparkBuilder datatype handling
+
+```
+
+*compiler.build.spark.types.Long.convertMWToRetValue*
+
+```notalanguage
+compiler.build.spark.types.Long/convertMWToRetValue is a function.
+    str = convertMWToRetValue(obj, srcData)
+
+```
+
+*compiler.build.spark.types.Long.getEncoderInstantiation*
+
+```notalanguage
+compiler.build.spark.types.Long/getEncoderInstantiation is a function.
+    encInst = getEncoderInstantiation(obj)
+
+```
+
+*compiler.build.spark.types.Long.getEncoderType*
+
+```notalanguage
+compiler.build.spark.types.Long/getEncoderType is a function.
     encType = getEncoderType(obj)
 
 ```
@@ -5205,6 +5423,38 @@ compiler.build.spark.types.Double/getEncoderInstantiation is a function.
 
 ```notalanguage
 compiler.build.spark.types.Double/getEncoderType is a function.
+    encType = getEncoderType(obj)
+
+```
+
+
+#### compiler.build.spark.types.Boolean
+
+```notalanguage
+  Boolean Class used for SparkBuilder datatype handling
+
+```
+
+*compiler.build.spark.types.Boolean.convertMWToRetValue*
+
+```notalanguage
+compiler.build.spark.types.Boolean/convertMWToRetValue is a function.
+    str = convertMWToRetValue(obj, srcData)
+
+```
+
+*compiler.build.spark.types.Boolean.getEncoderInstantiation*
+
+```notalanguage
+compiler.build.spark.types.Boolean/getEncoderInstantiation is a function.
+    encInst = getEncoderInstantiation(obj)
+
+```
+
+*compiler.build.spark.types.Boolean.getEncoderType*
+
+```notalanguage
+compiler.build.spark.types.Boolean/getEncoderType is a function.
     encType = getEncoderType(obj)
 
 ```
@@ -5274,38 +5524,6 @@ compiler.build.spark.types.Integer/getEncoderType is a function.
 ```
 
 
-#### compiler.build.spark.types.Long
-
-```notalanguage
-  Long Class used for SparkBuilder datatype handling
-
-```
-
-*compiler.build.spark.types.Long.convertMWToRetValue*
-
-```notalanguage
-compiler.build.spark.types.Long/convertMWToRetValue is a function.
-    str = convertMWToRetValue(obj, srcData)
-
-```
-
-*compiler.build.spark.types.Long.getEncoderInstantiation*
-
-```notalanguage
-compiler.build.spark.types.Long/getEncoderInstantiation is a function.
-    encInst = getEncoderInstantiation(obj)
-
-```
-
-*compiler.build.spark.types.Long.getEncoderType*
-
-```notalanguage
-compiler.build.spark.types.Long/getEncoderType is a function.
-    encType = getEncoderType(obj)
-
-```
-
-
 #### compiler.build.spark.types.Short
 
 ```notalanguage
@@ -5333,38 +5551,6 @@ compiler.build.spark.types.Short/getEncoderInstantiation is a function.
 
 ```notalanguage
 compiler.build.spark.types.Short/getEncoderType is a function.
-    encType = getEncoderType(obj)
-
-```
-
-
-#### compiler.build.spark.types.String
-
-```notalanguage
-  String Class used for SparkBuilder datatype handling
-
-```
-
-*compiler.build.spark.types.String.convertMWToRetValue*
-
-```notalanguage
-compiler.build.spark.types.String/convertMWToRetValue is a function.
-    str = convertMWToRetValue(obj, srcData)
-
-```
-
-*compiler.build.spark.types.String.getEncoderInstantiation*
-
-```notalanguage
-compiler.build.spark.types.String/getEncoderInstantiation is a function.
-    encInst = getEncoderInstantiation(obj)
-
-```
-
-*compiler.build.spark.types.String.getEncoderType*
-
-```notalanguage
-compiler.build.spark.types.String/getEncoderType is a function.
     encType = getEncoderType(obj)
 
 ```
@@ -5409,174 +5595,25 @@ compiler.build.spark.types.Table/getEncoderType is a function.
 
 ```
 
-
-#### compiler.build.spark.buildtype.BaseType
-
-```notalanguage
-  BaseType Base type for Spark Build types
-
-```
-
-*compiler.build.spark.buildtype.BaseType.getClassBuild*
+##### matlab.sparkutils.buildMWEncoder
 
 ```notalanguage
-compiler.build.spark.buildtype.BaseType/getClassBuild is a function.
-    obj = compiler.build.spark.buildtype.BaseType
-
-```
-
-*compiler.build.spark.buildtype.BaseType.getLinkArgument*
-
-```notalanguage
-compiler.build.spark.buildtype.BaseType/getLinkArgument is a function.
-    obj = compiler.build.spark.buildtype.BaseType
-
-```
-
-*compiler.build.spark.buildtype.BaseType.getBuildTarget*
-
-```notalanguage
-compiler.build.spark.buildtype.BaseType/getBuildTarget is a function.
-    obj = compiler.build.spark.buildtype.BaseType
-
-```
-
-*compiler.build.spark.buildtype.BaseType.mccOpts*
-
-```notalanguage
-compiler.build.spark.buildtype.BaseType/mccOpts is a function.
-    obj = compiler.build.spark.buildtype.BaseType
-
-```
-
-*compiler.build.spark.buildtype.BaseType.log*
-
-```notalanguage
- LOG    Natural logarithm.
-    LOG(X) is the natural logarithm of the elements of X.
-    Complex results are produced if X is not positive.
+  buildMWEncoder Builds the MWEncoder Jar
  
-    See also LOG1P, LOG2, LOG10, EXP, LOGM, REALLOG.
+  The MWEncoder Jar is needed when building Jars using the
+  SparkBuilder. Differences in the underlying implementation affects
+  the sources, so different versions must be built for Apache Spark and
+  Databricks
 
 ```
 
-
-#### compiler.build.spark.buildtype.JavaLib
-
-```notalanguage
-  JavaLib BuildType for java libraries
-
-```
-
-*compiler.build.spark.buildtype.JavaLib.getClassBuild*
+##### matlab.sparkutils.isApacheSpark
 
 ```notalanguage
-compiler.build.spark.buildtype.JavaLib/getClassBuild is a function.
-    str = getClassBuild(obj)
-
-```
-
-*compiler.build.spark.buildtype.JavaLib.getLinkArgument*
-
-```notalanguage
-compiler.build.spark.buildtype.JavaLib/getLinkArgument is a function.
-    str = getLinkArgument(obj)
-
-```
-
-*compiler.build.spark.buildtype.JavaLib.getBuildTarget*
-
-```notalanguage
-compiler.build.spark.buildtype.JavaLib/getBuildTarget is a function.
-    str = getBuildTarget(obj)
-
-```
-
-*compiler.build.spark.buildtype.JavaLib.mccOpts*
-
-```notalanguage
-compiler.build.spark.buildtype.JavaLib/mccOpts is a function.
-    opts = mccOpts(~)
-
-```
-
-
-#### compiler.build.spark.buildtype.SparkApi
-
-```notalanguage
-  SparkApi BuildType for spark (used with tall)
-
-```
-
-*compiler.build.spark.buildtype.SparkApi.getClassBuild*
-
-```notalanguage
-compiler.build.spark.buildtype.SparkApi/getClassBuild is a function.
-    str = getClassBuild(obj)
-
-```
-
-*compiler.build.spark.buildtype.SparkApi.getLinkArgument*
-
-```notalanguage
-compiler.build.spark.buildtype.SparkApi/getLinkArgument is a function.
-    str = getLinkArgument(obj)
-
-```
-
-*compiler.build.spark.buildtype.SparkApi.getBuildTarget*
-
-```notalanguage
-compiler.build.spark.buildtype.SparkApi/getBuildTarget is a function.
-    str = getBuildTarget(obj)
-
-```
-
-*compiler.build.spark.buildtype.SparkApi.mccOpts*
-
-```notalanguage
-compiler.build.spark.buildtype.SparkApi/mccOpts is a function.
-    opts = mccOpts(~)
-
-```
-
-
-#### compiler.build.spark.buildtype.SparkTall
-
-```notalanguage
-  SparkTall BuildType for spark (used with tall)
-
-```
-
-*compiler.build.spark.buildtype.SparkTall.getClassBuild*
-
-```notalanguage
-compiler.build.spark.buildtype.SparkTall/getClassBuild is a function.
-    str = getClassBuild(obj)
-
-```
-
-*compiler.build.spark.buildtype.SparkTall.getLinkArgument*
-
-```notalanguage
-compiler.build.spark.buildtype.SparkTall/getLinkArgument is a function.
-    str = getLinkArgument(~)
-
-```
-
-*compiler.build.spark.buildtype.SparkTall.getBuildTarget*
-
-```notalanguage
-compiler.build.spark.buildtype.SparkTall/getBuildTarget is a function.
-    str = getBuildTarget(obj)
-
-```
-
-*compiler.build.spark.buildtype.SparkTall.mccOpts*
-
-```notalanguage
-compiler.build.spark.buildtype.SparkTall/mccOpts is a function.
-    opts = mccOpts(~)
+  isApacheSpark Returns true if this is 'normal Spark'
+ 
+  This function will return true for Apache Spark, and false otherwise.
+  The only other Spark supported currently is Databricks
 
 ```
 
@@ -5623,6 +5660,39 @@ compiler.build.spark.buildtype.SparkTall/mccOpts is a function.
  
   Retrieve name of sparkbuilder-runtimequeue used with current
   MATLAB version.
+
+```
+
+##### matlab.sparkutils.getSparkMATLABEncodersFullName
+
+```notalanguage
+  getSparkMATLABEncodersFullName Retrieve name of Spark Encoders Jar
+ 
+  [name, plainName] = matlab.sparkutils.getSparkMATLABEncodersFullName
+  name =
+      "C:\EI\BigData\matlab-apache-spark\Modules\matlab-spark-api\Software\MATLAB\lib\jar\matlab-spark-encoders_3.0.1-0.1.0.jar"
+  plainName =
+      'matlab-spark-encoders_3.0.1-0.1.0.jar'
+ 
+  [name, plainName] = matlab.sparkutils.getSparkMATLABEncodersFullName
+  name =
+      "C:\EI\BigData\matlab-apache-spark\Modules\matlab-spark-api\Software\MATLAB\lib\jar\matlab-spark-encoders_3.0.1-0.1.0.jar"
+  plainName =
+      'matlab-spark-encoders_3.0.1-0.1.0.jar'
+
+```
+
+##### matlab.sparkutils.getMatlabSparkUtilityVersion
+
+```notalanguage
+  getMatlabSparkUtilityVersion Retrieve version from pom-file
+
+```
+
+##### matlab.sparkutils.getVersionFromSparkHome
+
+```notalanguage
+  getVersionFromSparkHome Retrieve version from SPARK_HOME
 
 ```
 
@@ -5686,10 +5756,127 @@ compiler.build.spark.buildtype.SparkTall/mccOpts is a function.
 
 ```
 
-##### matlab.sparkutils.getMatlabSparkUtilityVersion
+##### matlab.sparkutils.getSystemSparkVersion
 
 ```notalanguage
-  getMatlabSparkUtilityVersion Retrieve version from pom-file
+  getSystemSparkVersion Query Spark about its version
+
+```
+
+##### matlab.sparkutils.queryMaven
+
+```notalanguage
+  queryMaven Query Maven for a specific artifact
+ 
+  This function will query maven for a specific artifact and
+  return the results in JSON.
+  It takes string argument pairs, that corresponds to query arguments
+  in the API. Examples are:
+  g - groupId
+  a - artifactId
+  v - version
+ 
+  Example, query for the artifact scala-compiler with version 2.12.10
+  result = matlab.sparkutils.queryMaven('a', 'scala-compiler', 'v', '2.12.10');
+
+```
+
+
+#### matlab.sparkutils.StringWriter
+
+```notalanguage
+  StringWriter - Helper class for writing to files or temporary strings
+
+```
+
+*matlab.sparkutils.StringWriter.delete*
+
+```notalanguage
+ DELETE   Delete a handle object.
+    DELETE(H) deletes all handle objects in array H. After the delete 
+    function call, H is an array of invalid objects.
+ 
+    See also MATLAB.SPARKUTILS.STRINGWRITER, MATLAB.SPARKUTILS.STRINGWRITER/ISVALID, CLEAR
+
+Help for matlab.sparkutils.StringWriter/delete is inherited from superclass handle
+
+```
+
+*matlab.sparkutils.StringWriter.unindent*
+
+```notalanguage
+matlab.sparkutils.StringWriter/unindent is a function.
+    unindent(this)
+
+```
+
+*matlab.sparkutils.StringWriter.indent*
+
+```notalanguage
+matlab.sparkutils.StringWriter/indent is a function.
+    indent(this)
+
+```
+
+*matlab.sparkutils.StringWriter.tab*
+
+```notalanguage
+matlab.sparkutils.StringWriter/tab is a function.
+    tab(this, num)
+
+```
+
+*matlab.sparkutils.StringWriter.insertLines*
+
+```notalanguage
+  insertLines Splits on \n and inserts lines
+
+```
+
+*matlab.sparkutils.StringWriter.nl*
+
+```notalanguage
+matlab.sparkutils.StringWriter/nl is a function.
+    nl(this)
+
+```
+
+*matlab.sparkutils.StringWriter.pf*
+
+```notalanguage
+  Short-hand for printf
+
+```
+
+*matlab.sparkutils.StringWriter.insertFile*
+
+```notalanguage
+matlab.sparkutils.StringWriter/insertFile is a function.
+    insertFile(this, fileName)
+
+```
+
+*matlab.sparkutils.StringWriter.getString*
+
+```notalanguage
+matlab.sparkutils.StringWriter/getString is a function.
+    str = getString(this)
+
+```
+
+*matlab.sparkutils.StringWriter.getProtectString*
+
+```notalanguage
+matlab.sparkutils.StringWriter/getProtectString is a function.
+    str = getProtectString(this)
+
+```
+
+*matlab.sparkutils.StringWriter.closeFile*
+
+```notalanguage
+matlab.sparkutils.StringWriter/closeFile is a function.
+    closeFile(this)
 
 ```
 
@@ -5839,111 +6026,6 @@ matlab.sparkutils.Config.setInMemoryVersion is a function.
   overwriteUserConfig Overwrite user config with defaults
   This may be needed if user config is present, but the
   structure of the default config has changed.
-
-```
-
-
-#### matlab.sparkutils.JavaWriter
-
-```notalanguage
-  JavaWriter - Helper class for creating a Java file
-
-```
-
-*matlab.sparkutils.JavaWriter.delete*
-
-```notalanguage
- DELETE   Delete a handle object.
-    DELETE(H) deletes all handle objects in array H. After the delete 
-    function call, H is an array of invalid objects.
- 
-    See also MATLAB.SPARKUTILS.JAVAWRITER, MATLAB.SPARKUTILS.JAVAWRITER/ISVALID, CLEAR
-
-Help for matlab.sparkutils.JavaWriter/delete is inherited from superclass handle
-
-```
-
-*matlab.sparkutils.JavaWriter.getMCRFactoryName*
-
-```notalanguage
-matlab.sparkutils.JavaWriter/getMCRFactoryName is a function.
-    name = getMCRFactoryName(obj)
-
-```
-
-*matlab.sparkutils.JavaWriter.lastPackageLevel*
-
-```notalanguage
-matlab.sparkutils.JavaWriter/lastPackageLevel is a function.
-    name = lastPackageLevel(obj)
-
-```
-
-*matlab.sparkutils.JavaWriter.addPostClass*
-
-```notalanguage
-matlab.sparkutils.JavaWriter/addPostClass is a function.
-    addPostClass(obj, str)
-
-```
-
-*matlab.sparkutils.JavaWriter.addVariable*
-
-```notalanguage
-  addVariable Adds a member variable to the class
-  JW.addVariable("public int num");
-  printf arguments can also be used, i.e.
-  JW.addVariable("public %s %s", typeName, memberName);
-
-```
-
-*matlab.sparkutils.JavaWriter.addEncoder*
-
-```notalanguage
-  addEncoder Adds an encoder. 
- 
-  The encoder info is created by a method in the File class,
-
-```
-
-*matlab.sparkutils.JavaWriter.addMethod*
-
-```notalanguage
-matlab.sparkutils.JavaWriter/addMethod is a function.
-    addMethod(obj, str, atStart)
-
-```
-
-*matlab.sparkutils.JavaWriter.newMethod*
-
-```notalanguage
-  newMethod Return a StringWriter for a method
-
-```
-
-*matlab.sparkutils.JavaWriter.addImport*
-
-```notalanguage
-  addImport Adds an import string
-  addImport("my.fine.Class")
-  will produce the line
-  import my.fine.Class;
-
-```
-
-*matlab.sparkutils.JavaWriter.writeFile*
-
-```notalanguage
-              pkgParts = split(obj.Package, ".");
-              if isempty(obj.PathPrepend)
-                  filePath = fullfile(pkgParts{:});
-              else
-                  filePath = fullfile(obj.PathPrepend, pkgParts{:});
-              end
-              if ~exist(filePath, 'dir')
-                  mkdir(filePath);
-              end
-              fileName = [fullfile(filePath, char(obj.ClassName)), '.java'];
 
 ```
 
@@ -6108,101 +6190,270 @@ matlab.sparkutils.SparkSessionHandler.getSession is a function.
 ```
 
 
-#### matlab.sparkutils.StringWriter
+#### matlab.sparkutils.PomDep
 
 ```notalanguage
-  StringWriter - Helper class for writing to files or temporary strings
+  PomDef Class to handle pom dependencies
 
 ```
 
-*matlab.sparkutils.StringWriter.delete*
+*matlab.sparkutils.PomDep.initData*
+
+```notalanguage
+matlab.sparkutils.PomDep/initData is a function.
+    initData(obj, lines)
+
+```
+
+
+#### matlab.sparkutils.PomGenerator
+
+```notalanguage
+  Class to handle Spark Pom-file generation
+
+```
+
+*matlab.sparkutils.PomGenerator.getJarList*
+
+```notalanguage
+matlab.sparkutils.PomGenerator/getJarList is a function.
+    jars = getJarList(obj)
+
+```
+
+*matlab.sparkutils.PomGenerator.readDepTreeFile*
+
+```notalanguage
+matlab.sparkutils.PomGenerator/readDepTreeFile is a function.
+    readDepTreeFile(obj)
+
+```
+
+*matlab.sparkutils.PomGenerator.getInfoFromManifest*
+
+```notalanguage
+matlab.sparkutils.PomGenerator/getInfoFromManifest is a function.
+    S = getInfoFromManifest(obj, name)
+
+```
+
+*matlab.sparkutils.PomGenerator.getInfoFromPomProperties*
+
+```notalanguage
+matlab.sparkutils.PomGenerator/getInfoFromPomProperties is a function.
+    S = getInfoFromPomProperties(obj, name)
+
+```
+
+*matlab.sparkutils.PomGenerator.parseMetaInfo*
+
+```notalanguage
+  Check Manifest
+
+```
+
+*matlab.sparkutils.PomGenerator.parseJarFile*
+
+```notalanguage
+matlab.sparkutils.PomGenerator/parseJarFile is a function.
+    S = parseJarFile(obj, J)
+
+```
+
+*matlab.sparkutils.PomGenerator.parseJarFiles*
+
+```notalanguage
+matlab.sparkutils.PomGenerator/parseJarFiles is a function.
+    parseJarFiles(obj)
+
+```
+
+*matlab.sparkutils.PomGenerator.generatePomFile*
+
+```notalanguage
+matlab.sparkutils.PomGenerator/generatePomFile is a function.
+    generatePomFile(obj)
+
+```
+
+*matlab.sparkutils.PomGenerator.setSparkVersion*
+
+```notalanguage
+  Retrieve version before actually generating classpath
+
+```
+
+*matlab.sparkutils.PomGenerator.getJars*
+
+```notalanguage
+matlab.sparkutils.PomGenerator/getJars is a function.
+    jars = getJars(obj)
+
+```
+
+*matlab.sparkutils.PomGenerator.setSparkHome*
+
+```notalanguage
+matlab.sparkutils.PomGenerator/setSparkHome is a function.
+    setSparkHome(obj)
+
+```
+
+
+#### matlab.sparkutils.SparkJar
+
+```notalanguage
+  SparkJar Class to help build the javaclasspath necessary for Spark
+
+```
+
+*matlab.sparkutils.SparkJar.build*
+
+```notalanguage
+  BUILD Build a local maven repository for the build
+  This step builds a local repository for the creation of the uber jar
+  On success a pom file path is returned as a character vector.
+  On failure an empty character vector is returned.
+ 
+  Parameters:
+   extractLocation : Required character vector parameter that specifies
+                     where the Databricks Connect download has been stored.
+
+```
+
+*matlab.sparkutils.SparkJar.getAdditionalJarFiles*
+
+```notalanguage
+  getAdditionalJarFiles Method to download some external Jar files
+ 
+  What files are downloaded depends on the settings for this
+  installation, found in the Config.
+ 
+  See <a href="help matlab.sparkutils.Config">matlab.sparkutils.Config</a>
+
+```
+
+
+#### matlab.sparkutils.JavaWriter
+
+```notalanguage
+  JavaWriter - Helper class for creating a Java file
+
+```
+
+*matlab.sparkutils.JavaWriter.delete*
 
 ```notalanguage
  DELETE   Delete a handle object.
     DELETE(H) deletes all handle objects in array H. After the delete 
     function call, H is an array of invalid objects.
  
-    See also MATLAB.SPARKUTILS.STRINGWRITER, MATLAB.SPARKUTILS.STRINGWRITER/ISVALID, CLEAR
+    See also MATLAB.SPARKUTILS.JAVAWRITER, MATLAB.SPARKUTILS.JAVAWRITER/ISVALID, CLEAR
 
-Help for matlab.sparkutils.StringWriter/delete is inherited from superclass handle
-
-```
-
-*matlab.sparkutils.StringWriter.unindent*
-
-```notalanguage
-matlab.sparkutils.StringWriter/unindent is a function.
-    unindent(this)
+Help for matlab.sparkutils.JavaWriter/delete is inherited from superclass handle
 
 ```
 
-*matlab.sparkutils.StringWriter.indent*
+*matlab.sparkutils.JavaWriter.getMCRFactoryName*
 
 ```notalanguage
-matlab.sparkutils.StringWriter/indent is a function.
-    indent(this)
+matlab.sparkutils.JavaWriter/getMCRFactoryName is a function.
+    name = getMCRFactoryName(obj)
 
 ```
 
-*matlab.sparkutils.StringWriter.tab*
+*matlab.sparkutils.JavaWriter.lastPackageLevel*
 
 ```notalanguage
-matlab.sparkutils.StringWriter/tab is a function.
-    tab(this, num)
+matlab.sparkutils.JavaWriter/lastPackageLevel is a function.
+    name = lastPackageLevel(obj)
 
 ```
 
-*matlab.sparkutils.StringWriter.insertLines*
+*matlab.sparkutils.JavaWriter.addPostClass*
 
 ```notalanguage
-  insertLines Splits on \n and inserts lines
+matlab.sparkutils.JavaWriter/addPostClass is a function.
+    addPostClass(obj, str)
 
 ```
 
-*matlab.sparkutils.StringWriter.nl*
+*matlab.sparkutils.JavaWriter.addVariable*
 
 ```notalanguage
-matlab.sparkutils.StringWriter/nl is a function.
-    nl(this)
+  addVariable Adds a member variable to the class
+  JW.addVariable("public int num");
+  printf arguments can also be used, i.e.
+  JW.addVariable("public %s %s", typeName, memberName);
 
 ```
 
-*matlab.sparkutils.StringWriter.pf*
+*matlab.sparkutils.JavaWriter.addEncoder*
 
 ```notalanguage
-  Short-hand for printf
+  addEncoder Adds an encoder. 
+ 
+  The encoder info is created by a method in the File class,
 
 ```
 
-*matlab.sparkutils.StringWriter.insertFile*
+*matlab.sparkutils.JavaWriter.addMethod*
 
 ```notalanguage
-matlab.sparkutils.StringWriter/insertFile is a function.
-    insertFile(this, fileName)
+matlab.sparkutils.JavaWriter/addMethod is a function.
+    addMethod(obj, str, atStart)
 
 ```
 
-*matlab.sparkutils.StringWriter.getString*
+*matlab.sparkutils.JavaWriter.newMethod*
 
 ```notalanguage
-matlab.sparkutils.StringWriter/getString is a function.
-    str = getString(this)
+  newMethod Return a StringWriter for a method
 
 ```
 
-*matlab.sparkutils.StringWriter.getProtectString*
+*matlab.sparkutils.JavaWriter.addImport*
 
 ```notalanguage
-matlab.sparkutils.StringWriter/getProtectString is a function.
-    str = getProtectString(this)
+  addImport Adds an import string
+  addImport("my.fine.Class")
+  will produce the line
+  import my.fine.Class;
 
 ```
 
-*matlab.sparkutils.StringWriter.closeFile*
+*matlab.sparkutils.JavaWriter.writeFile*
 
 ```notalanguage
-matlab.sparkutils.StringWriter/closeFile is a function.
-    closeFile(this)
+              pkgParts = split(obj.Package, ".");
+              if isempty(obj.PathPrepend)
+                  filePath = fullfile(pkgParts{:});
+              else
+                  filePath = fullfile(obj.PathPrepend, pkgParts{:});
+              end
+              if ~exist(filePath, 'dir')
+                  mkdir(filePath);
+              end
+              fileName = [fullfile(filePath, char(obj.ClassName)), '.java'];
+
+```
+
+*matlab.sparkutils.JavaWriter.escape*
+
+```notalanguage
+matlab.sparkutils.JavaWriter/escape is a function.
+    str = escape(~, str)
+
+```
+
+##### matlab.sparkutils.internal.genExpressionEncoders
+
+```notalanguage
+  genExpressionEncoders Generate expression encoders Scala code
+ 
+  Shipping Spark only supports up to 5 return arguments for a tuple.
+  This function generates additional code, to be inserted into
+  SparkUtilityHelper.scala, that will have more versions.
 
 ```
 
@@ -6518,6 +6769,10 @@ matlab.sparkutils.StringWriter/closeFile is a function.
 
 ```notalanguage
   PRETTY Function to prettify JSON using GSON
+
+    Other uses of pretty
+
+       sym/pretty
 
 ```
 

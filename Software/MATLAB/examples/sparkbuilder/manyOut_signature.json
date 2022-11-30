@@ -1,0 +1,18 @@
+{
+  "InTypes": [
+    ["double", [1, 1], "a"],
+    ["double", [1, 1], "b"]
+  ],
+  "OutTypes": [
+    ["double", [1, 1], "Y1"],
+    ["double", [1, 1], "Y2"],
+    ["double", [1, 1], "Y3"],
+    ["double", [1, 1], "Y4"],
+    ["double", [1, 1], "Y5"],
+    ["double", [1, 1], "Y6"],
+    ["double", [1, 1], "Y7"],
+    ["double", [1, 1], "Y8"],
+    ["double", [1, 1], "Y9"],
+    ["double", [1, 1], "Y10"]
+  ]
+}
