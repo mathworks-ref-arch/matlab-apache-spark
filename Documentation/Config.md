@@ -108,39 +108,32 @@ a `clear` command is issued, the Config is still valid.
 
 ## Maven build info
 The `matlab-spark-utility` Jar file, which is needed for certain operations,
-must be built for the corresponding Spark version.
+must be built for the corresponding Spark version. It relies on a few different definitions,
+so it's recommended to build it with this MATLAB command:
 
-This is built from the command line using the command
-```bash
-mvn clean package
+```matlab
+matlab.sparkutils.buildMatlabSparkUtility
 ```
 
-Without further parameters, it will build the Jar file for Spark 3.0.1.
-
-If another version should be built, certain properties of the maven build
-must be changed from the command line. This information is also contained in
-the configuration file, and there is a method, `genMavenBuildCommand`,
-for generating the correct maven build string.
+If necessary, the details of the build settings can be found by inspecting the output
+of the method `genMavenBuildCommand` on the `Config` object.
 
 ```matlab
 >> C = matlab.sparkutils.Config.getInMemoryConfig()
 C = 
   Config with properties:
 
-          Versions: ["2.4.5"    "2.4.7"    "3.0.1"    "3.0.1-hadoop3.2"]
+          Versions: ["2.2.0"    "2.4.5"    "2.4.7"    "3.0.1"    "3.0.1-hadoop3.2"    "3.1.2"    "3.2.1"]
     CurrentVersion: '3.0.1'
             Master: 'local'
 >> C.genMavenBuildCommand
 Run this command to build matlab-spark-utility:
-	mvn -Dspark.version=2.4.7 -Dspark.major.version=2.x -Dscala.version=2.11.12 -Dscala.compat.version=2.11 clean package
+	mvn --batch-mode -Dspark.fullversion=3.0.1 -Dspark.version=3.0.1 -Dspark.major.version=3.x -Dscala.version=2.12.10 -Dscala.compat.version=2.12 -Dhadoop.version=2.7.4 clean package
 ```
 
-This shows that the correct build command for Spark 2.4.7 would be
-```bash
-mvn -Dspark.version=2.4.7 -Dspark.major.version=2.x \
-    -Dscala.version=2.11.12 -Dscala.compat.version=2.11 \
-    clean package
-```
+It should also be noted, that the command furthermore needs a *Profile* set. The utility mentioned above,
+`matlab.sparkutils.buildMatlabSparkUtility` handles this for the user, and also makes the distinctions
+for building for Apache Spark as opposed to for Databricks.
 
 ## Adding support for other Spark versions
 A few versions of Spark are supported directly, but more can be added.

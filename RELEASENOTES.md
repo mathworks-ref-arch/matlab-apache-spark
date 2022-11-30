@@ -1,5 +1,17 @@
 #  MATLAB Interface *for Apache Spark* - Release Notes
 
+## 0.1.22 (30th November 2022)
+* matlab-spark-api, release 0.2.8
+  * Support encryption for `SparkBuilder`
+  * Support obfuscation for `SparkBuilder`
+* matlab-spark-api, release 0.2.7
+  * Minor Apple silicon fix
+* matlab-spark-api, release 0.2.6
+  * Implemented `pivot` method on `RelationalGroupedDataset`
+  * Enabled Apple silicon beta in startup
+* matlab-spark-api, release 0.2.5
+  * Consolidated building Java based utilities
+
 ## 0.1.21 (4th November 2022)
 * SparkApiRef update
 * matlab-spark-api, release 0.2.4
