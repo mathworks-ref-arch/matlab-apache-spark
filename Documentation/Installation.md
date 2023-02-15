@@ -95,22 +95,28 @@ need to be on the *MATLAB Static Java Classpath*.
 Running this requires, as in the previous step, a JDK >= 8 and Apache Maven installed
 on the machine where this is built.
 
-####  MATLAB Runtime Queue
-This is a utility that is needed when running a Jar compiled with MATLAB Compiler SDK
-and the `SparkBuilder` (available in this package). To build it, simply run:
+There are two Jars that need to be built,
+`matlab-spark-utility-*.jar` and
+`sparkbuilder-runtimequeue-*.jar`. 
+The former mainly handles communication between MATLAB and the Spark context for interactive
+use. The latter is needed when running a Jar compiled with MATLAB Compiler SDK
+and `SparkBuilder` (available in this package).
 
+They can both be built with the command:
 ```matlab
-matlab.sparkutils.buildRuntimeQueueJar
-```
-#### MATLAB Encoders
-This is another utility that
- is needed when running a Jar compiled with MATLAB Compiler SDK
-and the `SparkBuilder` (available in this package). To build it, simply run:
-
-```matlab
-matlab.sparkutils.buildMWEncoder
+matlab.sparkutils.buildMatlabSparkAPIJars
 ```
 
+If any of these Jars need to be rebuilt separately, this can be done with the commands:
+```matlab
+matlab.sparkutils.buildMatlabSparkUtility()
+```
+and
 
-[//]: #  (Copyright 2021-2022 The MathWorks, Inc.)
+```matlab
+matlab.sparkutils.buildRuntimeQueueJar()
+```
+
+
+[//]: #  (Copyright 2021-2023 The MathWorks, Inc.)
 

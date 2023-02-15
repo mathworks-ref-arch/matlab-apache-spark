@@ -1,5 +1,15 @@
 #  MATLAB Interface *for Apache Spark* - Release Notes
 
+## 0.1.23 (15th February 2023)
+* Doc updates for install
+* matlab-spark-api, release 0.3.1
+  * Tests added
+* matlab-spark-api, release 0.3.0
+  * Install doc fixes
+  * Implemented `mode` method for `DataFrameWriter`
+  * Implemented `bucketBy` and `sortBy` for `DataFrameWriter`
+  * Improved javabuilder path handling
+
 ## 0.1.22 (30th November 2022)
 * matlab-spark-api, release 0.2.8
   * Support encryption for `SparkBuilder`
